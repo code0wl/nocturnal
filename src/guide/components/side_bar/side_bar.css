@@ -1,6 +1,5 @@
 .library-side-nav {
     background: #222;
-    max-width: 200px;
     overflow: auto;
     padding: 1rem 0;
     height: calc(100% - 5rem);
