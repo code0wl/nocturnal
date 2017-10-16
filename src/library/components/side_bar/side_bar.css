@@ -1,3 +1,9 @@
 .library-side-nav {
+    background: #222;
+    max-width: 200px;
+    height: calc(100% - 5rem);
+}
 
+.library-side-nav li {
+    font-size: .8rem;
 }
