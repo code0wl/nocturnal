@@ -5,11 +5,9 @@ import "./side_bar.css";
 export class LibrarySideBar extends Component {
     render() {
         return (
-            <nav>
-                <ul className="library-side-nav">
-                    <LibraryListItem/>
-                </ul>
-            </nav>
+            <ul className="library-side-nav">
+                <LibraryListItem/>
+            </ul>
         )
     }
 }

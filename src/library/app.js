@@ -1,12 +1,14 @@
 import React, {Component} from "react";
-import "./app.css";
 import "mini.css";
+import "./app.css";
 import {LibrarySideBar} from "./components/side_bar/side_bar";
+import {HeaderNav} from "./components/header/header";
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="app">
+                <HeaderNav/>
                 <LibrarySideBar/>
             </div>
         );
