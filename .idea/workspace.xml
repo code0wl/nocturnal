@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e03eb0d-1d59-4a5b-b66c-fb8f08cfd6c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/library/components/header/header.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/library/components/header/header.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/library/components/header/header.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/living-react-library.iml" afterPath="$PROJECT_DIR$/.idea/living-react-library.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/app.css" afterPath="$PROJECT_DIR$/src/library/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/app.js" afterPath="$PROJECT_DIR$/src/library/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/components/side_bar/side_bar.css" afterPath="$PROJECT_DIR$/src/library/components/side_bar/side_bar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/components/side_bar/side_bar.js" afterPath="$PROJECT_DIR$/src/library/components/side_bar/side_bar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/components/header/header.js" afterPath="$PROJECT_DIR$/src/library/components/header/header.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,31 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/library/app.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/library/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="46">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/library/components/header/header.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="115">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,7 +66,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/library/index.js" />
         <option value="$PROJECT_DIR$/src/registerServiceWorker.js" />
@@ -94,11 +78,12 @@
         <option value="$PROJECT_DIR$/src/library/app.test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/library/components/side_bar/side_bar.css" />
-        <option value="$PROJECT_DIR$/src/library/components/header/header.js" />
         <option value="$PROJECT_DIR$/src/library/components/side_bar/side_bar.js" />
         <option value="$PROJECT_DIR$/src/library/app.css" />
-        <option value="$PROJECT_DIR$/src/library/app.js" />
         <option value="$PROJECT_DIR$/src/library/components/header/header.css" />
+        <option value="$PROJECT_DIR$/src/library/components/header/header.js" />
+        <option value="$PROJECT_DIR$/src/library/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -198,7 +183,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -212,24 +197,58 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+              <item name="public" type="cbb8eebc:String" user="public" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="library" type="cbb8eebc:String" user="library" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="library" type="cbb8eebc:String" user="library" />
+              <item name="components" type="cbb8eebc:String" user="components" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="living-react-library" type="cbb8eebc:String" user="living-react-library" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="library" type="cbb8eebc:String" user="library" />
+              <item name="components" type="cbb8eebc:String" user="components" />
+              <item name="header" type="cbb8eebc:String" user="header" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="node_modules" type="cbb8eebc:String" user="node_modules" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="living-react-library" type="b2602c69:ProjectViewProjectNode" />
               <item name="living-react-library" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="living-react-library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="living-react-library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="living-react-library" type="b2602c69:ProjectViewProjectNode" />
-              <item name="living-react-library" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="library" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,7 +263,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/src/library/app.css&#10;web&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/node_modules/react-scripts/config/webpack.config.dev.js&#10;pac&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/package.json&#10;igno&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/.gitignore" />
+    <property name="SearchEverywhereHistoryKey" value="pac&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/package.json&#10;pa&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/package.json&#10;header&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/src/library/components/header/header.js&#10;gi&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/.gitignore&#10;app&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/src/library/app.css&#10;web&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/node_modules/react-scripts/config/webpack.config.dev.js&#10;igno&#9;FILE&#9;file:///Users/oscarlodriguez/go/src/github.com/code0wl/living-react-library/.gitignore" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v6.9.2/bin/node" />
     <property name="JavaScriptPreferStrict" value="false" />
@@ -322,12 +341,12 @@
       <option name="presentableId" value="Default" />
       <updated>1508173062765</updated>
       <workItem from="1508173065701" duration="177000" />
-      <workItem from="1508173713350" duration="2594000" />
+      <workItem from="1508173713350" duration="3120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2771000" />
+    <option name="totallyTimeSpent" value="3297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -363,14 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/library/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -383,14 +394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -499,22 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/components/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/library/components/header/header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -523,10 +510,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/components/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/library/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="46">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
