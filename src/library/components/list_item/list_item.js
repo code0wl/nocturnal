@@ -1,13 +1,10 @@
-import React, {Component} from "react";
-import {stub} from "./stub";
+import React from "react";
+import {stubs} from "./stub";
 
-export class LibraryListItem extends Component {
-    render() {
-
-        console.log(stub);
-
+export default () => {
+    return stubs.map((stub, index) => {
         return (
-            <li>I am a list Item</li>
-        )
-    }
+            <li key={index}>{stub}</li>
+        );
+    });
 }
