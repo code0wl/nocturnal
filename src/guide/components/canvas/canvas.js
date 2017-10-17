@@ -8,7 +8,7 @@ export class LibraryCanvas extends Component {
         return (
             <main className="canvas">
                 <article>
-                    <Route path='/componentName' component={ComponentViewer}/>
+                    <Route path='/componentName0' component={ComponentViewer}/>
                 </article>
             </main>
         )
