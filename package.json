@@ -1,24 +1,25 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "fs-extra": "^4.0.2",
-    "mini.css": "^2.3.5",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "gulp-cli": "^1.4.0",
-    "gulp-watch": "^4.3.11",
-    "node-dir": "^0.1.17"
-  }
+    "name": "app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "fs-extra": "^4.0.2",
+        "mini.css": "^2.3.5",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-router-dom": "^4.2.2",
+        "react-scripts": "1.0.14"
+    },
+    "scripts": {
+        "component": "node tasks/materials.js",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "devDependencies": {
+        "gulp-cli": "^1.4.0",
+        "gulp-watch": "^4.3.11",
+        "node-dir": "^0.1.17"
+    }
 }
