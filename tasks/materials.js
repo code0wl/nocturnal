@@ -1,18 +1,17 @@
-// watch changes in materials and add them to source
+const fse = require("fs-extra");
+const dir = require("node-dir");
 
-var gulp = require("gulp"),
-    watch = require("gulp-watch");
-
-gulp.task("stream", function () {
-    // Endless stream mode
-    return watch("css/**/*.css", {ignoreInitial: false})
-        .pipe(gulp.dest("build"));
+dir.files(`./src/materials`, (err, files) => {
+    if (err) {
+        throw err;
+    }
+    console.log(files);
 });
 
-gulp.task("callback", function () {
-    // Callback mode, useful if any plugin in the pipeline depends on the `end`/`flush` event
-    return watch("css/**/*.css", function () {
-        gulp.src("css/**/*.css")
-            .pipe(gulp.dest("build"));
+fse.outputFile("tmp/materials/text.json", "Stuff")
+    .then(() => {
+        console.log("The file was saved!");
+    })
+    .catch(err => {
+        console.error(err)
     });
-});
