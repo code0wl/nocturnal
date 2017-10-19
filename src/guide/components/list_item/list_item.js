@@ -6,7 +6,7 @@ export default () => {
     return components.map(component => {
         return component.items.map((item, index) => {
             return (
-                <Link key={index} to={item}>
+                <Link key={index} to={component.material + "-" + item}>
                     <li>{item}</li>
                 </Link>
             );
