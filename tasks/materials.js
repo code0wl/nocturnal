@@ -13,9 +13,13 @@ dir.files(`./src/materials`, (err, file) => {
         const map = {
             material: mat[2],
             type: mat[3],
-            name: mat[4]
+            items: [mat[4].split(".")[0]]
         };
         mapper.push(map);
+
+        const tree = mapper.map((item) => {
+            console.log(item);
+        });
     });
 
     fse.outputJson("src/guide/materials.json", mapper)

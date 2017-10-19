@@ -1,1 +1,1 @@
-[{"material":"atoms","type":"button","name":"some-component.js"},{"material":"atoms","type":"checkbox","name":"some-component.js"},{"material":"molecules","type":"input","name":"some-component.js"},{"material":"organisms","type":"form","name":"some-component.js"}]
+[{"material":"atoms","type":"button","items":["Button"]},{"material":"atoms","type":"checkbox","items":["Checkbox"]},{"material":"molecules","type":"input","items":["InputField"]},{"material":"organisms","type":"form","items":["Form"]}]

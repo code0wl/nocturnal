@@ -13,7 +13,9 @@ export default class App extends Component {
                 <div className="app">
                     <HeaderNav/>
                     <div className="app-canvas">
-                        <SideBar/>
+                        <aside className="library-side-nav">
+                            <SideBar/>
+                        </aside>
                         <LibraryCanvas/>
                     </div>
                 </div>
