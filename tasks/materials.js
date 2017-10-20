@@ -16,13 +16,23 @@ dir.files(`./src/materials`, (err, file) => {
             items: [mat[4].split(".")[0]]
         };
         mapper.push(map);
-
-        const tree = mapper.map((item) => {
-            console.log(item);
-        });
     });
 
-    fse.outputJson("src/guide/materials.json", mapper)
+    const tree = {};
+
+    for (let i = 0; i < mapper.length; i++) {
+        if (!tree[mapper[i].material]) {
+            tree[mapper[i].material] = [mapper[i]];
+        } else {
+            tree[mapper[i].material].push(mapper[i]);
+        }
+    }
+
+    const materialsJSON = {
+        materials: [tree]
+    };
+
+    fse.outputJson("src/guide/materials.json", materialsJSON)
         .then(() => {
             console.log("The file was saved!");
         })
