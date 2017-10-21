@@ -1,1 +1,1 @@
-{"materials":[{"molecules":[{"material":"molecules","type":"input","items":["InputField"]}],"atoms":[{"material":"atoms","type":"button","items":["Button"]},{"material":"atoms","type":"checkbox","items":["Checkbox"]}],"organisms":[{"material":"organisms","type":"form","items":["Form"]}]}]}
+{"materials":[{"atoms":[{"material":"atoms","type":"button","items":["Button"]},{"material":"atoms","type":"checkbox","items":["Checkbox"]}],"organisms":[{"material":"organisms","type":"form","items":["Form"]}],"molecules":[{"material":"molecules","type":"input","items":["InputField"]}]}]}

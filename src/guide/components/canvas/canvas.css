@@ -4,6 +4,6 @@
 }
 
 .canvas-component {
-    padding: 1rem;
-    border: 1px solid;
+    padding: 7rem 1rem;
+    border-bottom: 1px solid #2f333c;
 }

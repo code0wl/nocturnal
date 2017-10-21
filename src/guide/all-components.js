@@ -1,12 +1,4 @@
-import React from 'react';
-
-export class Stuff extends React.Component {
-    render() {
-        return (
-            <div>Hi there</div>
-        );
-    }
-};import React from "react";
+import React from "react";
 
 export class Button extends React.Component {
     render() {
@@ -26,6 +18,14 @@ export class Checkbox extends Component {
         );
     }
 };import React from "react";
+
+export class Stuff extends React.Component {
+    render() {
+        return (
+            <div>Hi there</div>
+        );
+    }
+};import React from 'react';
 
 export class Stuff extends React.Component {
     render() {
