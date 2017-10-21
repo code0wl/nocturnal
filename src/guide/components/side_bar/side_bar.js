@@ -1,7 +1,7 @@
 import React from "react";
-import ListItem from "../list_item/list_item";
 import * as components from "../../materials.json";
 import "./side_bar.css";
+import ListContainer from "../list_item/list_container";
 
 export default () => {
     return components.materials.map((component) => {
@@ -10,10 +10,8 @@ export default () => {
             return component[material].map((item) => {
                 return (
                     <div>
-                        <h4>{material}</h4>
-                        <ul>
-                            <ListItem items={item}/>
-                        </ul>
+                        <h4>metarial</h4>
+                        <ListContainer items={item}/>
                     </div>
                 );
             });
