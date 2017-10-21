@@ -20,13 +20,6 @@ function createMaterials() {
                 items: [mat[4].split(".")[0]]
             };
             mapper.push(map);
-
-        });
-
-        concat(file, "./src/guide/all-components.js", (err) => {
-            if (err) {
-                throw err;
-            }
         });
 
         const tree = {};
