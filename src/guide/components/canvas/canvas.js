@@ -1,14 +1,15 @@
 import React, {Component} from "react";
 import "./canvas.css";
 import {Route} from "react-router-dom";
-import {Button} from "../../../materials/atoms/button/Button";
+import SiteRoutes from "../routes/routes";
 
 export default class Canvas extends Component {
     render() {
         return (
             <main className="canvas">
                 <article className="canvas-component">
-                    <Route path="/button" component={Button}/>
+                    <h3> {window.location.pathname.replace("/", "")} </h3>
+                    <Route path="*" component={SiteRoutes}/>
                 </article>
             </main>
         );

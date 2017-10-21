@@ -7,17 +7,18 @@ a:visited {
     color: darkgrey;
 }
 
-a:hover{
+a:hover {
     color: white;
 }
 
 .canvas-component {
-    padding: 5rem 1rem;
+    padding: 0 1rem 5rem 1rem;
     border-bottom: 1px solid #2f333c;
 }
 
 .canvas-component h3 {
     color: #606e7f;
+    text-transform: capitalize;
     margin: 0;
     padding-bottom: 3rem;
 }
