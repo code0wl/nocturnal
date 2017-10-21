@@ -25,7 +25,6 @@ function createMaterials() {
             if (err) {
                 throw err;
             }
-            console.log("done");
         });
 
         const tree = {};
