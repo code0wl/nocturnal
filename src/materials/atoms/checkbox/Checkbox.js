@@ -1,9 +1,10 @@
 import React from 'react';
+import {Component} from "react/cjs/react.production.min";
 
-export default class Stuff extends React.Component {
+export class Checkbox extends Component {
     render() {
         return (
-            <div>Hi there</div>
+            <input type="checkbox" />
         );
     }
-}
+};

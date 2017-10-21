@@ -1,7 +1,7 @@
 const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
-const fs = require("fs");
+const concat = require("concat-files");
 
 function createMaterials() {
     dir.files(`./src/materials`, (err, file) => {
@@ -10,8 +10,6 @@ function createMaterials() {
         }
 
         const mapper = [];
-        const components = [];
-
         file.map((materials, index) => {
             const mat = materials.split("/");
             const map = {
@@ -21,6 +19,13 @@ function createMaterials() {
             };
             mapper.push(map);
 
+        });
+
+        concat(file, "./src/guide/all-components.js", (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log("done");
         });
 
         const tree = {};

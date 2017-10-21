@@ -2,3 +2,8 @@
     padding: 2rem;
     flex-grow: 1;
 }
+
+.canvas-component {
+    padding: 1rem;
+    border: 1px solid;
+}

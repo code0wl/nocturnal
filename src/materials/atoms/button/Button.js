@@ -6,4 +6,4 @@ export class Button extends React.Component {
             <button>I am a button</button>
         );
     }
-}
+};
