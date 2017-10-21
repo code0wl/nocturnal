@@ -6,14 +6,13 @@ import "./side_bar.css";
 export default () => {
     return components.materials.map((component) => {
         return Object.keys(component).map((material) => {
-            return component[material].map((materials) => {
-                return (
-                    <div>
-                        <h4>{material}</h4>
-                        <ListContainer items={materials}/>
-                    </div>
-                );
-            });
+            console.log(component[material]);
+            return (
+                <div>
+                    <h4>{material}</h4>
+                    <ListContainer/>
+                </div>
+            );
         });
     });
 };
