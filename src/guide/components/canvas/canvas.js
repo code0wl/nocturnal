@@ -6,7 +6,6 @@ import {Checkbox} from '../../../materials/atoms/checkbox/Checkbox';
 export default () => {
     return (
         <main className="canvas">
-            {/*// TODO: list all components*/}
             <article className="canvas-component">
                 <h3>Button</h3>
                 <Button/>
