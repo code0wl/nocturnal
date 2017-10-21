@@ -1,6 +1,7 @@
 const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
+const fs = require("fs");
 
 function createMaterials() {
     dir.files(`./src/materials`, (err, file) => {
@@ -9,8 +10,9 @@ function createMaterials() {
         }
 
         const mapper = [];
+        const components = [];
 
-        file.map((materials) => {
+        file.map((materials, index) => {
             const mat = materials.split("/");
             const map = {
                 material: mat[2],
@@ -18,6 +20,7 @@ function createMaterials() {
                 items: [mat[4].split(".")[0]]
             };
             mapper.push(map);
+
         });
 
         const tree = {};
@@ -47,3 +50,5 @@ function createMaterials() {
 watch("src/materials/", {recursive: true}, () => {
     createMaterials();
 });
+
+createMaterials();
