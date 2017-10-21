@@ -1,10 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default ({materials}) => {
     return materials.map((material, index) => {
         return (
             <li key={index}>
-                <a href={`#/${material.type}`}>{material.type} </a>
+                <Link to={material.type}>{material.type} </Link>
             </li>
         );
     });

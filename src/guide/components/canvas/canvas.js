@@ -1,19 +1,16 @@
-import React from "react";
+import React, {Component} from "react";
 import "./canvas.css";
-import {Button} from '../../../materials/atoms/button/Button';
-import {Checkbox} from '../../../materials/atoms/checkbox/Checkbox';
+import {Route} from "react-router-dom";
+import {Button} from "../../../materials/atoms/button/Button";
 
-export default () => {
-    return (
-        <main className="canvas">
-            <article className="canvas-component">
-                <h3>Button</h3>
-                <Button/>
-            </article>
-            <article className="canvas-component">
-                <h3>Checkbox</h3>
-                <Checkbox />
-            </article>
-        </main>
-    )
+export default class Canvas extends Component {
+    render() {
+        return (
+            <main className="canvas">
+                <article className="canvas-component">
+                    <Route path="/button" component={Button}/>
+                </article>
+            </main>
+        );
+    }
 };
