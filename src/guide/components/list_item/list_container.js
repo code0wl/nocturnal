@@ -1,10 +1,11 @@
 import React from "react";
 import ListItem from "./list_item";
 
-export default () => {
+export default ({materials}) => {
     return (
         <ul>
-            <ListItem />
+            <ListItem
+                materials={materials}/>
         </ul>
     );
 }

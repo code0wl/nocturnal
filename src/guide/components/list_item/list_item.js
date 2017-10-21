@@ -1,7 +1,9 @@
 import React from "react";
 
-export default () => {
-    return (
-        <li> hl</li>
-    );
+export default ({materials}) => {
+    return materials.map((material, index) => {
+        return (
+            <li key={index}> {material.type} </li>
+        );
+    });
 }

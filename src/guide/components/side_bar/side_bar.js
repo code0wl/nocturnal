@@ -5,12 +5,12 @@ import "./side_bar.css";
 
 export default () => {
     return components.materials.map((component) => {
-        return Object.keys(component).map((material) => {
-            console.log(component[material]);
+        return Object.keys(component).map((material, index) => {
+            const comp = component[material];
             return (
                 <div>
-                    <h4>{material}</h4>
-                    <ListContainer/>
+                    <h4 key={material + index}>{material}</h4>
+                    <ListContainer key={material} materials={comp}/>
                 </div>
             );
         });
