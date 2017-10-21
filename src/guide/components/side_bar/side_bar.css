@@ -19,8 +19,12 @@
 
 .library-side-nav li {
     font-size: .8rem;
-    padding: 1rem;
     list-style: none;
+}
+
+.library-side-nav a {
+    display: block;
+    padding: 1rem;
 }
 
 .library-side-nav li:hover {

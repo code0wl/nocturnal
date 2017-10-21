@@ -1,14 +1,13 @@
 import React, {Component} from "react";
+import Routes from "./routes";
 import "./canvas.css";
-import {Route} from "react-router-dom";
-import ComponentViewer from './component_viewer';
 
 export class LibraryCanvas extends Component {
     render() {
         return (
             <main className="canvas">
                 <article>
-                    <Route path='/componentName0' component={ComponentViewer}/>
+                    <Routes/>
                 </article>
             </main>
         )
