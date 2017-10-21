@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Stuff extends React.Component {
+export class Button extends React.Component {
     render() {
         return (
-            <div>Hi there</div>
+            <button>I am a button</button>
         );
     }
 }

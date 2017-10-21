@@ -1,15 +1,14 @@
-import React, {Component} from "react";
+import React from "react";
 import Routes from "./routes";
+import * as components from "../../materials.json";
 import "./canvas.css";
 
-export class LibraryCanvas extends Component {
-    render() {
-        return (
-            <main className="canvas">
-                <article>
-                    <Routes/>
-                </article>
-            </main>
-        )
-    }
-}
+export default () => {
+    return (
+        <main className="canvas">
+            <article>
+                <Routes materials={components.materials}/>
+            </article>
+        </main>
+    )
+};

@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import "mini.css";
 import "./app.css";
+import "./theme.css";
 import SideBar from "./components/side_bar/side_bar";
-import {LibraryCanvas} from "./components/canvas/canvas";
+import LibraryCanvas from "./components/canvas/canvas";
 import {HashRouter} from "react-router-dom";
 
 export default class App extends Component {
