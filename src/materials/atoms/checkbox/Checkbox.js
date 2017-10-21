@@ -4,7 +4,9 @@ import {Component} from "react/cjs/react.production.min";
 export class Checkbox extends Component {
     render() {
         return (
-            <input type="checkbox" />
+            <div className="input-group">
+                <input type="checkbox" value="true"/>
+            </div>
         );
     }
 };

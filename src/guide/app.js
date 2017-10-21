@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import "mini.css";
 import "./app.css";
 import "./theme.css";
 import SideBar from "./components/side_bar/side_bar";

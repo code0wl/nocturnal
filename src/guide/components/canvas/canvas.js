@@ -8,6 +8,8 @@ export default () => {
         <main className="canvas">
             <article className="canvas-component">
                 <Button/>
+            </article>
+            <article className="canvas-component">
                 <Checkbox />
             </article>
         </main>
