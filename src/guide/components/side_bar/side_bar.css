@@ -1,13 +1,26 @@
 .library-side-nav {
-    background: #222;
+    background: #373e48;
     overflow: auto;
     padding: 1rem 0;
-    height: calc(100vh - 5rem);
+    height: 100vh;
+    width: 250px;
+}
+
+.library-side-nav h4 {
+    text-transform: capitalize;
+    margin: 1rem;
+}
+
+.library-side-nav ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
 }
 
 .library-side-nav li {
     font-size: .8rem;
     padding: 1rem;
+    list-style: none;
 }
 
 .library-side-nav li:hover {
