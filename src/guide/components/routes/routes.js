@@ -1,13 +1,17 @@
-import React from 'react';
-import {Button} from "../../../materials/atoms/button/Button";
-import {Checkbox} from "../../../materials/atoms/checkbox/Checkbox";
-import {Route} from "react-router-dom";
+import React from "react";
+import * as components from "../../materials.json";
+import Route from "react-router-dom/es/Route";
 
 export default () => {
-    return (
-        <div>
-            <Route path="/button" component={Button}/>
-            <Route path="/checkbox" component={Checkbox}/>
-        </div>
-    );
+    return components.materials.map((component) => {
+        Object.keys(component).map(item => {
+            component[item][0].items.map((material) => {
+                return (
+                    <div>
+                        <Route path={material.path} component={material.component}/>
+                    </div>
+                );
+            });
+        });
+    });
 }
