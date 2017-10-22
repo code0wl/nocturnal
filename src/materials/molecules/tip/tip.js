@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React from "react";
 
-export class Form2 extends Component {
+export class Tip extends React.Component {
     render() {
         return (
             <div>Hi there</div>
