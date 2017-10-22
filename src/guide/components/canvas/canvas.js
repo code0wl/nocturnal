@@ -11,6 +11,11 @@ export default class Canvas extends Component {
                     <h3> {window.location.pathname.replace("/", "")} </h3>
                     <Route component={SiteRoutes}/>
                 </article>
+                <article>
+                    <code className="code-area">
+                        Code area thingy
+                    </code>
+                </article>
             </main>
         );
     }
