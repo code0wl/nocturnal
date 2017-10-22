@@ -13,7 +13,7 @@ export default class Canvas extends Component {
                     <Route component={SiteRoutes}/>
                 </article>
                 <article>
-                    <Code content="hello" selected={SiteRoutes} />
+                    <Code content={this.props.selectedRoute}/>
                 </article>
             </main>
         );

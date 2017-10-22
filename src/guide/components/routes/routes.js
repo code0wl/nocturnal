@@ -6,11 +6,9 @@ import * as Components from "../../../materials_index";
 export default () => {
     return components.materials.map((component) => {
         return Object.keys(component).map(item => {
-            return component[item].map((material) => {
+            return component[item].map((material, index) => {
                 return (
-                    <div>
-                        <Route path={material.path} component={Components[material.component]}/>
-                    </div>
+                    <Route key={index} path={material.path} component={Components[material.component]}/>
                 );
             });
         });
