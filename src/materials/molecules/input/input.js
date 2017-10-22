@@ -1,6 +1,6 @@
 import React from "react";
 
-export class InputField extends React.Component {
+export class Input extends React.Component {
     render() {
         return (
             <div>Hi there</div>

@@ -4,7 +4,6 @@ import "./styles/theme.css";
 import SideBar from "./components/side_bar/side_bar";
 import Canvas from "./components/canvas/canvas";
 import {BrowserRouter as Router} from "react-router-dom";
-import "./fragments";
 
 export default class App extends Component {
     render() {
