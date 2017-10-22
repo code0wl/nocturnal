@@ -8,7 +8,9 @@ export default () => {
         return Object.keys(component).map(item => {
             return component[item].map((material) => {
                 return (
-                    <Route path={material.path} component={Components[material.component]}/>
+                    <div>
+                        <Route path={material.path} component={Components[material.component]}/>
+                    </div>
                 );
             });
         });

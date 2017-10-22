@@ -15,7 +15,7 @@ function createMaterials() {
                 material: mat[2],
                 path: `/${mat[3]}`,
                 type: mat[3],
-                items: [mat[4].split(".")[0]]
+                component: mat[3].charAt(0).toUpperCase() + mat[3].slice(1).toLowerCase()
             };
             mapper.push(map);
         });
