@@ -5,11 +5,10 @@ import Route from "react-router-dom/es/Route";
 export default () => {
     return components.materials.map((component) => {
         Object.keys(component).map(item => {
-            component[item][0].items.map((material) => {
+            component[item].map((material) => {
+                console.log("material", material.component);
                 return (
-                    <div>
-                        <Route path={material.path} component={material.component}/>
-                    </div>
+                    <Route path={material.path} component={material.component}/>
                 );
             });
         });

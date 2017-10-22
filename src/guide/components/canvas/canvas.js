@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import "../../fragments";
 import "./canvas.css";
 import {Route} from "react-router-dom";
 import SiteRoutes from "../routes/routes";
@@ -10,9 +9,9 @@ export default class Canvas extends Component {
             <main className="canvas">
                 <article className="canvas-component">
                     <h3> {window.location.pathname.replace("/", "")} </h3>
-                    <Route path="*" component={SiteRoutes}/>
+                    <Route component={SiteRoutes}/>
                 </article>
             </main>
         );
     }
-};
+}

@@ -5,6 +5,7 @@ const concat = require("concat-files");
 const fs = require("fs");
 
 const allComponents = "./src/guide/all-components.js";
+const fragments = "./src/guide/fragments.js";
 
 function createMaterials() {
     dir.files(`./src/materials`, (err, file) => {
@@ -36,9 +37,11 @@ function createMaterials() {
                 return console.log(err);
             }
 
-            const result = data.replace(/import.*/mg, "");
+            const result = data.replace(/import/g, '\nimport');
 
-            fs.writeFile("./src/guide/fragments.js", result, "utf8", function (err) {
+            console.log(result);
+
+            fs.writeFile(fragments, result, "utf8", function (err) {
                 if (err) return console.log(err);
             });
         });
