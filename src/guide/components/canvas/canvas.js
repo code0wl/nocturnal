@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "../../fragments";
 import "./canvas.css";
 import {Route} from "react-router-dom";
 import SiteRoutes from "../routes/routes";

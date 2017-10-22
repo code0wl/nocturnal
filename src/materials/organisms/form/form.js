@@ -6,4 +6,4 @@ export class Form extends React.Component {
             <div>Hi there</div>
         );
     }
-};
+}

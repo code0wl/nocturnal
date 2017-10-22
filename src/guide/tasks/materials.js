@@ -2,6 +2,9 @@ const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
 const concat = require("concat-files");
+const fs = require("fs");
+
+const allComponents = "./src/guide/all-components.js";
 
 function createMaterials() {
     dir.files(`./src/materials`, (err, file) => {
@@ -22,10 +25,22 @@ function createMaterials() {
             mapper.push(map);
         });
 
-        concat(file, "./src/guide/all-components.js", (err) => {
+        concat(file, allComponents, (err) => {
             if (err) {
                 throw err;
             }
+        });
+
+        fs.readFile(allComponents, "utf8", (err, data) => {
+            if (err) {
+                return console.log(err);
+            }
+
+            const result = data.replace(/import.*/mg, "");
+
+            fs.writeFile("./src/guide/fragments.js", result, "utf8", function (err) {
+                if (err) return console.log(err);
+            });
         });
 
         const tree = {};

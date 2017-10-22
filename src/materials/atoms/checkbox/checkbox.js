@@ -1,5 +1,4 @@
-import React from 'react';
-import {Component} from "react/cjs/react.production.min";
+import React, {Component} from "react";
 
 export class Checkbox extends Component {
     render() {
@@ -9,4 +8,4 @@ export class Checkbox extends Component {
             </div>
         );
     }
-};
+}

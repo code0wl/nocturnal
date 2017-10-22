@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export class InputField extends React.Component {
     render() {
@@ -6,4 +6,4 @@ export class InputField extends React.Component {
             <div>Hi there</div>
         );
     }
-};
+}
