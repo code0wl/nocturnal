@@ -1,7 +1,7 @@
 import React from "react";
 import * as components from "../../materials.json";
 import Route from "react-router-dom/es/Route";
-import * as Components from "../../../materials/index";
+import * as Components from "../../../materials_index";
 
 export default () => {
     return components.materials.map((component) => {
