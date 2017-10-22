@@ -22,6 +22,12 @@ function createMaterials() {
             mapper.push(map);
         });
 
+        concat(file, "./src/guide/all-components.js", (err) => {
+            if (err) {
+                throw err;
+            }
+        });
+
         const tree = {};
 
         for (let i = 0; i < mapper.length; i++) {

@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Stuff extends React.Component {
+export class Form extends React.Component {
     render() {
         return (
             <div>Hi there</div>
