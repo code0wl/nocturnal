@@ -30,18 +30,35 @@ function createMaterials() {
             }
         }
 
+        registerRoutes(file, mapper);
+
         const materialsJSON = {
             materials: [tree]
         };
 
         fse.outputJson("src/guide/materials.json", materialsJSON)
             .then(() => {
-                console.log("The file was saved!");
+                console.log("JSON material tree created successfully!");
             })
             .catch(err => {
                 console.error(err)
             });
     });
+}
+
+function registerRoutes(file, locations) {
+    let locationFragment = "";
+    locations.map((location, index) => {
+        locationFragment += `export {${location.component}} from "${file[index].replace("src", ".")}";`;
+    });
+
+    fse.outputFile("src/materials_index.js", locationFragment)
+        .then(() => {
+            console.log("Routes initialised!");
+        })
+        .catch(err => {
+            console.error(err)
+        });
 }
 
 watch("src/materials/", {recursive: true}, () => {
