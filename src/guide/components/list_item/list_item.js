@@ -1,11 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-export default ({materials}) => {
-    return materials.map((material, index, selected) => {
+export default ({materials, select}) => {
+    return materials.map((material, index) => {
         return (
             <li key={index}>
-                <Link selected={selected} to={material.type}>{material.type} </Link>
+                <Link className={window.location.pathname === "/" + material.type ? "is-selected": ""} onClick={select} to={material.type}> {material.type} </Link>
             </li>
         );
     });

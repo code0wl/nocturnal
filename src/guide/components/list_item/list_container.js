@@ -4,7 +4,7 @@ import ListItem from "./list_item";
 export default ({materials, selected}) => {
     return (
         <ul>
-            <ListItem selected={selected} materials={materials}/>
+            <ListItem select={selected} materials={materials}/>
         </ul>
     );
 }

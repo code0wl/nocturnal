@@ -12,6 +12,7 @@
 .library-side-nav li {
     font-size: .8rem;
     list-style: none;
+    transition: all .4s;
     text-transform: capitalize;
 }
 
@@ -20,7 +21,10 @@
     padding: 1rem;
 }
 
+.library-side-nav .is-selected,
 .library-side-nav li:hover {
-    background: #333;
+    background: #4a525e;
     cursor: pointer;
+    color: #fff;
+    border-left: 4px solid #31e9e2;
 }

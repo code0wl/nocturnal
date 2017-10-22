@@ -3,14 +3,16 @@ import ListContainer from "../list_item/list_container";
 import * as components from "../../materials.json";
 import "./side_bar.css";
 
-export class SideBar extends Component {
+export default class SideBar extends Component {
     constructor() {
-        super();
-        this.setSelectedComponent = this.setSelectedComponent.bind(this);
+        super()
+        this.setSelectedItem = this.setSelectedItem.bind(this);
     }
 
-    setSelectedComponent() {
-        console.log("hello from sidebar");
+    setSelectedItem() {
+        this.setState({
+            selected: window.location.pathname
+        });
     }
 
     render() {
@@ -20,7 +22,7 @@ export class SideBar extends Component {
                 return (
                     <div key={material + index}>
                         <h4>{material}</h4>
-                        <ListContainer onClick={this.setSelectedComponent} materials={comp}/>
+                        <ListContainer selected={this.setSelectedItem} materials={comp}/>
                     </div>
                 );
             });
