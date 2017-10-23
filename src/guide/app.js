@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "skeleton-css/css/skeleton.css";
-import "material-icons";
+import "material-icons/css/material-icons.css";
 import "./app.css";
 import "./styles/theme.css";
 import SideBar from "./components/side_bar/side_bar";
