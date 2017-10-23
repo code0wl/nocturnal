@@ -23,10 +23,12 @@ function createMaterials() {
         const tree = {};
 
         for (let i = 0; i < mapper.length; i++) {
-            if (!tree[mapper[i].material]) {
-                tree[mapper[i].material] = [mapper[i]];
-            } else {
-                tree[mapper[i].material].push(mapper[i]);
+            if (file[i].includes(`.js`)) {
+                if (!tree[mapper[i].material]) {
+                    tree[mapper[i].material] = [mapper[i]];
+                } else {
+                    tree[mapper[i].material].push(mapper[i]);
+                }
             }
         }
 
@@ -47,9 +49,11 @@ function createMaterials() {
 }
 
 function registerRoutes(file, locations) {
-    let locationFragment = "";
+    let locationFragment = ``;
     locations.map((location, index) => {
-        locationFragment += `export {${location.component}} from "${file[index].replace("src", ".")}";`;
+        if (file[index].includes(`.js`)) {
+            locationFragment += `export {${location.component}} from "${file[index].replace("src", ".")}";`;
+        }
     });
 
     fse.outputFile("src/materials_index.js", locationFragment)

@@ -4,7 +4,7 @@ export class Checkbox extends Component {
     render() {
         return (
             <div className="input-group">
-                <input type="checkbox" value="true"/>
+                <input type="checkbox" onClick={this.props.handleToggle} value={this.props.toggle}/>
             </div>
         );
     }
