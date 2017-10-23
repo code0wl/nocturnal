@@ -16,8 +16,8 @@ export class ContextControl extends Component {
 
     render() {
         return (
-            <div>
-                <i class="mi mi-face"></i>
+            <div className="guide-controls">
+                <i className="mi mi-face"></i>
             </div>
         );
     }
