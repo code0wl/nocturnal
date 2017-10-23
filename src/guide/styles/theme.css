@@ -13,13 +13,23 @@ a:visited {
 }
 
 a:hover {
+    cursor: pointer;
     color: white;
+}
+
+.light-contrast a:hover {
+    color: black;
 }
 
 .canvas-component {
     padding: 0 1rem 5rem 1rem;
     border-bottom: 1px solid #2f333c;
 }
+
+.light-contrast .canvas-component {
+    border-bottom: 1px solid #e0e0e0;
+}
+
 
 .component-title {
     color: #606e7f;

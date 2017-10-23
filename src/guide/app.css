@@ -3,6 +3,10 @@
     background: #2a2e37;
 }
 
+.app.light-contrast {
+    background: #f0f0f0;
+}
+
 .app-canvas {
     display: flex;
 }

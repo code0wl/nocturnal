@@ -22,7 +22,7 @@ export default class App extends Component {
         this.setState({
             isAlternative: !this.state.isAlternative
         });
-        window.localStorage.setItem("theme", this.state.isAlternative);
+        window.localStorage.setItem("theme", !this.state.isAlternative);
     }
 
     render() {
