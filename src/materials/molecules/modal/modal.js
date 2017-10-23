@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Tip extends React.Component {
+export class Modal extends React.Component {
     render() {
         return (
             <div>Hi there</div>

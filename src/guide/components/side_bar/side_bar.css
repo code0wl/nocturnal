@@ -1,8 +1,3 @@
-.library-side-nav h6 {
-    text-transform: capitalize;
-    margin: 1rem;
-}
-
 .library-side-nav ul {
     list-style-position: inside;
     padding: 0;
@@ -14,6 +9,13 @@
     transition: all .4s;
     text-transform: capitalize;
     margin: 0;
+}
+
+.material-header-group {
+    padding: 3rem 1rem 1rem 1rem;
+    border-bottom: 1px solid;
+    text-transform: capitalize;
+    color: #4a525e;
 }
 
 .library-side-nav a {

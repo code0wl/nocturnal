@@ -21,7 +21,7 @@ export default class SideBar extends Component {
                 const comp = component[material];
                 return (
                     <div key={material + index}>
-                        <h6>{material}</h6>
+                        <h6 className="material-header-group">{material}</h6>
                         <ListContainer selected={this.setSelectedItem} materials={comp}/>
                     </div>
                 );
