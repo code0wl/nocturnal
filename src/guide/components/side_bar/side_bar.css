@@ -1,4 +1,4 @@
-.library-side-nav h4 {
+.library-side-nav h6 {
     text-transform: capitalize;
     margin: 1rem;
 }
@@ -10,10 +10,10 @@
 }
 
 .library-side-nav li {
-    font-size: .8rem;
     list-style: none;
     transition: all .4s;
     text-transform: capitalize;
+    margin: 0;
 }
 
 .library-side-nav a {

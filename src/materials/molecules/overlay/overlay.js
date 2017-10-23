@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Input extends React.Component {
+export class Tip extends React.Component {
     render() {
         return (
             <div>Hi there</div>

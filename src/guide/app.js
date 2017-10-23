@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "skeleton-css/css/skeleton.css";
 import "./app.css";
 import "./styles/theme.css";
 import SideBar from "./components/side_bar/side_bar";

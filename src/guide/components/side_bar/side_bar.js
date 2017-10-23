@@ -5,7 +5,7 @@ import "./side_bar.css";
 
 export default class SideBar extends Component {
     constructor() {
-        super()
+        super();
         this.setSelectedItem = this.setSelectedItem.bind(this);
     }
 
@@ -21,7 +21,7 @@ export default class SideBar extends Component {
                 const comp = component[material];
                 return (
                     <div key={material + index}>
-                        <h4>{material}</h4>
+                        <h6>{material}</h6>
                         <ListContainer selected={this.setSelectedItem} materials={comp}/>
                     </div>
                 );

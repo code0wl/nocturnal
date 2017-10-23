@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "mini.css": "^2.3.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "skeleton-css": "^2.0.4"
   },
   "scripts": {
     "component": "node tasks/materials.js",

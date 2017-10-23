@@ -8,7 +8,7 @@ export default class Canvas extends Component {
         return (
             <main className="canvas">
                 <article className="canvas-component">
-                    <h3> {window.location.pathname.replace("/", "")} </h3>
+                    <h3 className="component-title"> {window.location.pathname.replace("/", "")} </h3>
                     <Route component={SiteRoutes}/>
                 </article>
             </main>

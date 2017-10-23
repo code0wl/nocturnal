@@ -16,11 +16,11 @@ a:hover {
     border-bottom: 1px solid #2f333c;
 }
 
-.canvas-component h3 {
+.component-title {
     color: #606e7f;
     text-transform: capitalize;
     margin: 0;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .library-side-nav {
