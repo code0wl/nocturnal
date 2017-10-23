@@ -9,13 +9,29 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {ContextControl} from "./components/context_control/context_control";
 
 export default class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.toggleContrast = this.toggleContrast.bind(this);
+        this.state = {
+            isAlternative: window.localStorage.getItem("theme") === "true" ? true : false
+        }
+    }
+
+    toggleContrast() {
+        this.setState({
+            isAlternative: !this.state.isAlternative
+        });
+        window.localStorage.setItem("theme", this.state.isAlternative);
+    }
+
     render() {
         return (
             <Router>
-                <div className="app">
+                <div className={`app ${window.localStorage.getItem("theme") === "true" ? "light-contrast" : ""}`}>
                     <div className="app-canvas">
                         <aside className="library-side-nav">
-                            <ContextControl/>
+                            <ContextControl toggleContrast={this.toggleContrast}/>
                             <SideBar/>
                         </aside>
                         <Canvas/>
