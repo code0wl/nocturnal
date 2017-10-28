@@ -1,0 +1,1 @@
+export const FILTER_SEARCH = 'FILTER_SEARCH';

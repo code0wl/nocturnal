@@ -3,18 +3,17 @@ import "./filter.css";
 import Input from "muicss/lib/react/input";
 
 export default class Filter extends Component {
-    constructor() {
-        super();
+    constructor(props, context) {
+        super(props, context);
         this.handleInput = this.handleInput.bind(this);
         this.state = {
-            filter: ""
-        }
+            filterValue: ""
+        };
     }
 
     handleInput(e) {
-        console.log(e.currentTarget.value);
         this.setState({
-            filter: e.currentTarget.value
+            filterValue: e.currentTarget.value
         });
     }
 
