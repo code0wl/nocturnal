@@ -11,7 +11,8 @@
     "react-router": "^4.2.0",
     "react-scripts": "1.0.14",
     "redux": "^3.7.2",
-    "redux-immutable-state-invariant": "^2.1.0"
+    "redux-immutable-state-invariant": "^2.1.0",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "component": "node tasks/materials.js",

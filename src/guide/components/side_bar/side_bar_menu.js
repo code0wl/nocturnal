@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import ListContainer from "../list_item/list_container";
-import * as components from "../../materials.json";
 import "./side_bar.css";
 
-export default class SideBar extends Component {
+export default class SideBarMenu extends Component {
     constructor(props) {
         super(props);
         this.setSelectedItem = this.setSelectedItem.bind(this);
@@ -16,7 +15,7 @@ export default class SideBar extends Component {
     }
 
     render() {
-        return components.materials.map((component) => {
+        return this.props.components.materials.map((component) => {
             return Object.keys(component).map((material, index) => {
                 return (
                     <div key={material + index}>
