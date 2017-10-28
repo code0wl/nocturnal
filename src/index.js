@@ -1,11 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {render} from "react-dom";
 import "./guide/index.css";
 import App from "./guide/app";
 import config from './guide/store/config';
+import {Provider} from 'react-redux';
 import registerServiceWorker from "./guide/registerServiceWorker";
 
 const store = config();
+const target = document.getElementById("root");
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+render(
+    <Provider store={store}>
+        <App/>
+    </Provider>, target
+);
+
 registerServiceWorker();

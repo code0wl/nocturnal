@@ -28,7 +28,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <Router>
+            <Router >
                 <div className={`app ${window.localStorage.getItem("theme") === "true" ? "light-contrast" : ""}`}>
                     <div className="app-canvas">
                         <aside className="library-side-nav">
