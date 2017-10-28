@@ -17,7 +17,7 @@ class Filter extends Component {
         this.setState({
             filterValue: e.currentTarget.value
         });
-        this.props.dispatch(filter.filterValue)
+        this.props.dispatch(filter(this.state.filterValue));
     }
 
     render() {
