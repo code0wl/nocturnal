@@ -1,0 +1,44 @@
+.library-side-nav ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.library-side-nav li {
+    list-style: none;
+    transition: all .4s;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.material-header-group {
+    padding: 3rem 1rem 1rem 1rem;
+    border-bottom: 1px solid;
+    text-transform: capitalize;
+    color: #4a525e;
+}
+
+.light-contrast .material-header-group {
+    border-bottom: 1px solid #eee;
+}
+
+.library-side-nav a {
+    display: block;
+    padding: 1rem;
+}
+
+.library-side-nav .is-selected,
+.library-side-nav li:hover {
+    background: #4a525e;
+    cursor: pointer;
+    color: #fff;
+    border-left: 4px solid #31e9e2;
+}
+
+.light-contrast .library-side-nav .is-selected,
+.light-contrast .library-side-nav li:hover {
+    background: #efefef;
+    cursor: pointer;
+    color: #000;
+    border-left: 4px solid #ddd;
+}
