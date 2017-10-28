@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import "./filter.css";
+import Input from "muicss/lib/react/input";
 
 export default class Filter extends Component {
     constructor() {
@@ -10,6 +12,7 @@ export default class Filter extends Component {
     }
 
     handleInput(e) {
+        console.log(e.currentTarget.value);
         this.setState({
             filter: e.currentTarget.value
         });
@@ -17,7 +20,9 @@ export default class Filter extends Component {
 
     render() {
         return (
-            <input type="search" placeholder="Filter" onChange={this.handleInput}/>
+            <div className="filter">
+                <Input hint="Input 2" defaultValue="Value on load" onChange={this.handleInput}/>
+            </div>
         )
     }
 }

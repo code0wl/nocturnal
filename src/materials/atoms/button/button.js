@@ -6,7 +6,7 @@ export class Button extends React.Component {
     }
     render() {
         return (
-            <button onClick={this.props.handleClick}> {this.props.label} </button>
+            <button onClick={this.props.handleClick}> {this.props.label || "I am a Button"} </button>
         );
     }
 }

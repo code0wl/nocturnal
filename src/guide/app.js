@@ -7,6 +7,7 @@ import SideBar from "./components/side_bar/side_bar";
 import Canvas from "./components/canvas/canvas";
 import {BrowserRouter as Router} from "react-router-dom";
 import {ContextControl} from "./components/context_control/context_control";
+import Filter from "./components/filter/filter";
 
 export default class App extends Component {
 
@@ -32,6 +33,7 @@ export default class App extends Component {
                     <div className="app-canvas">
                         <aside className="library-side-nav">
                             <ContextControl toggleContrast={this.toggleContrast}/>
+                            <Filter/>
                             <SideBar/>
                         </aside>
                         <Canvas/>

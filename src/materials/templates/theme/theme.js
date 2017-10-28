@@ -21,7 +21,7 @@ export class Theme extends Component {
 
                 <article className="canvas-component">
                     <h3>Table</h3>
-                    <table class="u-full-width">
+                    <table className="u-full-width">
                         <thead>
                         <tr>
                             <th>Name</th>
