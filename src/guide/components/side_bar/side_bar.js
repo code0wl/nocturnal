@@ -4,8 +4,8 @@ import * as components from "../../materials.json";
 import "./side_bar.css";
 
 export default class SideBar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.setSelectedItem = this.setSelectedItem.bind(this);
     }
 
@@ -18,11 +18,10 @@ export default class SideBar extends Component {
     render() {
         return components.materials.map((component) => {
             return Object.keys(component).map((material, index) => {
-                const comp = component[material];
                 return (
                     <div key={material + index}>
                         <h6 className="material-header-group">{material}</h6>
-                        <ListContainer selected={this.setSelectedItem} materials={comp}/>
+                        <ListContainer selected={this.setSelectedItem} materials={component[material]}/>
                     </div>
                 );
             });

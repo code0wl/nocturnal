@@ -11,12 +11,13 @@ import Filter from "./components/filter/filter";
 
 export default class App extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor(props, store) {
+        super(props, store);
+        this.store = store;
         this.toggleContrast = this.toggleContrast.bind(this);
         this.state = {
             isAlternative: window.localStorage.getItem("theme") === "true" ? true : false
-        }
+        };
     }
 
     toggleContrast() {
@@ -24,6 +25,7 @@ export default class App extends Component {
             isAlternative: !this.state.isAlternative
         });
         window.localStorage.setItem("theme", !this.state.isAlternative);
+        console.log(this.store)
     }
 
     render() {
