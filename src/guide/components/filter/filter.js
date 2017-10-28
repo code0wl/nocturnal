@@ -20,7 +20,7 @@ export default class Filter extends Component {
     render() {
         return (
             <div className="filter">
-                <Input hint="Input 2" defaultValue="Value on load" onChange={this.handleInput}/>
+                <Input hint="Filter" onChange={this.handleInput}/>
             </div>
         )
     }

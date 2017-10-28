@@ -41,7 +41,6 @@ a:hover {
 .library-side-nav {
     background: #373e48;
     overflow: auto;
-    padding: 1rem 0;
     height: 100vh;
     width: 200px;
 }
