@@ -1,4 +1,4 @@
-import {FILTER_SEARCH} from "../../reducers/actions/actions";
+import {FILTER_SEARCH} from "../actions/actions";
 
 export default function filter(state = [], action) {
     switch (action.type) {
