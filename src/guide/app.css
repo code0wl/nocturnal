@@ -3,6 +3,18 @@
     background: #2a2e37;
 }
 
+.guide-logo {
+    width: 4.5rem;
+    padding: 1rem;
+}
+
+.guide nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: auto;
+}
+
 .app.light-contrast {
     background: #f0f0f0;
 }

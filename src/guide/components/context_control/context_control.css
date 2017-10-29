@@ -1,3 +1,15 @@
 .guide-controls a {
     display: inline;
+    padding: 0;
+}
+
+.guide-controls i {
+    height: auto;
+    padding-right: 1rem;
+}
+
+.guide-controls nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
