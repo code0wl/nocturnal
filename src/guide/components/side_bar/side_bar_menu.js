@@ -19,7 +19,7 @@ export default class SideBarMenu extends Component {
             return Object.keys(component).map((material, index) => {
                 return (
                     <div key={material + index}>
-                        {material.length > 1 ? <h6 className="material-header-group">{material}</h6> : ""}
+                        {material.length > 1 ? <h6 className="material-header-group">{material} <span data-badge-caption="" className="guide-component-count new badge">{component[material].length}</span></h6> : ""}
                         <ListContainer selected={this.setSelectedItem} materials={component[material]}/>
                     </div>
                 );

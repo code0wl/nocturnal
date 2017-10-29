@@ -42,7 +42,7 @@ export default class App extends Component {
 
         this.setState({
             filterValue: e.currentTarget.value.toLowerCase(),
-            components: e.currentTarget.value !== "" ? filteredComponents : components.materials
+            components: e.currentTarget.value !== "" ? filteredComponents : components.materials,
         });
     }
 
