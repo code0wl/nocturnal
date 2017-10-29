@@ -19,7 +19,7 @@ export default class App extends Component {
         this.state = {
             isAlternative: window.localStorage.getItem("theme") === "true" ? true : false,
             filterValue: "",
-            components
+            components: components.materials
         };
         this.handleFilter = this.handleFilter.bind(this);
     }
@@ -34,19 +34,17 @@ export default class App extends Component {
     handleFilter(e) {
         const criteria = e.currentTarget.value.toLowerCase();
 
-        const filteredComponents = components.materials.filter((component) => {
+        const filteredComponents = components.materials.map((component) => {
             return Object.keys(component).map((c, i) => {
-                return component[c].map((comp) => {
-                    comp.type.includes(criteria);
+                return component[c].filter((comp) => {
+                    return comp.type.includes(criteria);
                 });
             });
         });
 
-        console.log(filteredComponents);
-
         this.setState({
             filterValue: e.currentTarget.value.toLowerCase(),
-            components: this.state.filterValue  ? filteredComponents : components
+            components: this.state.filterValue ? filteredComponents : components.materials
         });
     }
 
@@ -58,7 +56,7 @@ export default class App extends Component {
                         <aside className="library-side-nav">
                             <ContextControl toggleContrast={this.toggleContrast}/>
                             <Filter change={this.handleFilter}/>
-                            <SideBarMenu components={this.state.components.materials}/>
+                            <SideBarMenu components={this.state.components}/>
                         </aside>
                         <Canvas/>
                     </div>
