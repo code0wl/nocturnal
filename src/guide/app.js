@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import "material-icons/css/material-icons.css";
-import "./app.css";
 import "materialize-css/dist/css/materialize.min.css";
+import "./app.css";
+import * as logo from "./assets/765701.png";
 import "./styles/theme.css";
 import SideBarMenu from "./components/side_bar/side_bar_menu";
 import Canvas from "./components/canvas/canvas";
@@ -14,7 +15,6 @@ export default class App extends Component {
 
     constructor(props, store) {
         super(props, store);
-        this.store = store;
         this.toggleContrast = this.toggleContrast.bind(this);
         this.state = {
             isAlternative: window.localStorage.getItem("theme") === "true" ? true : false,
@@ -52,6 +52,7 @@ export default class App extends Component {
                 <div className={`app ${window.localStorage.getItem("theme") === "true" ? "light-contrast" : ""}`}>
                     <div className="app-canvas">
                         <aside className="library-side-nav">
+                            <img src={logo} className="App-logo" alt="logo" />
                             <ContextControl toggleContrast={this.toggleContrast}/>
                             <Filter change={this.handleFilter}/>
                             <SideBarMenu components={this.state.components}/>
