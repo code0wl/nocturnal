@@ -35,7 +35,7 @@ export default class App extends Component {
         const criteria = e.currentTarget.value.toLowerCase();
 
         const filteredComponents = components.materials.map((component) => {
-            return Object.keys(component).map((c, i) => {
+            return Object.keys(component).map(c => {
                 return component[c].filter((comp) => {
                     return comp.type.includes(criteria);
                 });
