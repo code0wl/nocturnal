@@ -32,12 +32,10 @@ export default class App extends Component {
     }
 
     handleFilter(e) {
-        const criteria = e.currentTarget.value.toLowerCase();
-
         const filteredComponents = components.materials.map((component) => {
             return Object.keys(component).map(c => {
                 return component[c].filter((comp) => {
-                    return comp.type.includes(criteria);
+                    return comp.type.includes(e.currentTarget.value.toLowerCase());
                 });
             });
         });
