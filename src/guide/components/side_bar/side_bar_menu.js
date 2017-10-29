@@ -15,7 +15,7 @@ export default class SideBarMenu extends Component {
     }
 
     render() {
-        return this.props.components.materials.map((component) => {
+        return this.props.components.map((component) => {
             return Object.keys(component).map((material, index) => {
                 return (
                     <div key={material + index}>
