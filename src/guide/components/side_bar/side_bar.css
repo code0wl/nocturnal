@@ -13,18 +13,19 @@
 }
 
 .library-side-nav {
-    transition: transform .4s;
-    white-space: nowrap;
-    transform: translateX(0);
+    transition: all .4s;
+    height: 100vh;
     width: 300px;
+    overflow: auto;
+    transform: translateX(0);
 }
 
 .fullscreen .library-side-nav {
-    transform: translateX(-100%);
-    width: 0;
+    animation: slide-out 1s forwards;
 }
 
 .toggle-screen-stand-alone {
+    order: 1;
     display: none;
 }
 
@@ -63,3 +64,17 @@
     color: #000;
     border-left: 4px solid #ddd;
 }
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        transform: translateX(-100%);
+        width: 0;
+    }
+}
+
