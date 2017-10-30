@@ -4,6 +4,9 @@ tmp/
 
 # dependencies
 /node_modules
+/guide/materials.json
+materials_index.js
+
 
 # testing
 /coverage
