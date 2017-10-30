@@ -16,10 +16,12 @@ export default class App extends Component {
     constructor(props, store) {
         super(props, store);
         this.toggleContrast = this.toggleContrast.bind(this);
+        this.toggleFullScreen = this.toggleFullScreen.bind(this);
         this.state = {
             isAlternative: window.localStorage.getItem("theme") === "true" ? true : false,
             filterValue: "",
-            components: components.materials
+            components: components.materials,
+            fullScreen: window.localStorage.getItem("fullScreen") === "true" ? true : false
         };
         this.handleFilter = this.handleFilter.bind(this);
     }
@@ -46,13 +48,20 @@ export default class App extends Component {
         });
     }
 
+    toggleFullScreen() {
+        this.setState({
+            fullScreen: !this.state.fullScreen
+        });
+        window.localStorage.setItem("fullScreen", !this.state.fullScreen);
+    }
+
     render() {
         return (
             <Router>
                 <div className={`app ${window.localStorage.getItem("theme") === "true" ? "light-contrast" : ""}`}>
                     <div className="app-canvas">
-                        <aside className="library-side-nav">
-                            <ContextControl logo={logo} toggleContrast={this.toggleContrast}/>
+                        <aside className={`library-side-nav ${this.state.fullScreen ? 'fullscreen' : ''}`}>
+                            <ContextControl toggleFullScreen={this.toggleFullScreen} logo={logo} toggleContrast={this.toggleContrast}/>
                             <Filter change={this.handleFilter}/>
                             <SideBarMenu components={this.state.components}/>
                         </aside>

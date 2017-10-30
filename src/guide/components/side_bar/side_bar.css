@@ -12,6 +12,18 @@
     margin: 0;
 }
 
+.library-side-nav {
+    transition: all .4s;
+    white-space: nowrap;
+    transform: translateX(0);
+    width: 300px;
+}
+
+.library-side-nav.fullscreen {
+    transform: translateX(-100%);
+    width: 0;
+}
+
 .material-header-group {
     padding: 3rem 1rem 1rem 1rem;
     border-bottom: 1px solid;

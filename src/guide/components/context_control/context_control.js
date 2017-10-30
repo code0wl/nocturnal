@@ -7,11 +7,11 @@ export class ContextControl extends Component {
         this.mobileMode = this.mobileMode.bind(this);
         this.showPrintStyles = this.showPrintStyles.bind(this);
         this.state = {
-            alternativeTheme: false
+            alternativeTheme: false,
         }
     }
 
-    setFullScreen() {
+    realView(envUrl) {
 
     }
 
@@ -29,13 +29,13 @@ export class ContextControl extends Component {
                 <nav>
                     <img src={this.props.logo} className="guide-logo" alt="logo"/>
                     <div className="menu-items">
-                        <a onClick={this.showPrintStyles}>
+                        <a onClick={this.props.toggleFullScreen}>
                             <i className="mi mi-aspect-ratio"></i>
                         </a>
                         <a onClick={this.props.toggleContrast}>
                             <i className="mi mi-invert-colors"></i>
                         </a>
-                        <a onClick={this.showPrintStyles}>
+                        <a onClick={this.realView}>
                             <i className="mi mi-local-printshop"></i>
                         </a>
                         <a onClick={this.mobileMode}>
