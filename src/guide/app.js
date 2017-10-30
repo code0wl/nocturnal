@@ -59,8 +59,11 @@ export default class App extends Component {
         return (
             <Router>
                 <div className={`app ${window.localStorage.getItem("theme") === "true" ? "light-contrast" : ""}`}>
-                    <div className="app-canvas">
-                        <aside className={`library-side-nav ${this.state.fullScreen ? 'fullscreen' : ''}`}>
+                    <div className={`app-canvas ${this.state.fullScreen ? 'fullscreen' : ''}`}>
+                        <a className="toggle-screen-stand-alone" onClick={this.toggleFullScreen}>
+                            <i className="mi mi-aspect-ratio"></i>
+                        </a>
+                        <aside className="library-side-nav">
                             <ContextControl toggleFullScreen={this.toggleFullScreen} logo={logo} toggleContrast={this.toggleContrast}/>
                             <Filter change={this.handleFilter}/>
                             <SideBarMenu components={this.state.components}/>

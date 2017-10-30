@@ -13,15 +13,23 @@
 }
 
 .library-side-nav {
-    transition: all .4s;
+    transition: transform .4s;
     white-space: nowrap;
     transform: translateX(0);
     width: 300px;
 }
 
-.library-side-nav.fullscreen {
+.fullscreen .library-side-nav {
     transform: translateX(-100%);
     width: 0;
+}
+
+.toggle-screen-stand-alone {
+    display: none;
+}
+
+.fullscreen .toggle-screen-stand-alone {
+    display: block;
 }
 
 .material-header-group {
