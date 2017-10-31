@@ -8,5 +8,5 @@ export default ({change}) => {
             <Input hint="Filter" onChange={change}/>
             <i className="mi mi-filter-list"></i>
         </div>
-    )
+    );
 }

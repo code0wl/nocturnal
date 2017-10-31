@@ -21,8 +21,7 @@
 }
 
 .fullscreen .library-side-nav {
-    animation: slide-out 1s forwards;
-    width: 0;
+    animation: slide-out .6s forwards;
 }
 
 .toggle-screen-stand-alone {
@@ -71,10 +70,10 @@
         transform: translateX(0);
     }
     50% {
-        visibility: hidden;
+        transform: translateX(-150%);
     }
     100% {
-        transform: translateX(-100%);
+        width: 0;
     }
 }
 
