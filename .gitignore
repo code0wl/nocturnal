@@ -4,8 +4,6 @@ tmp/
 
 # dependencies
 /node_modules
-/guide/materials.json
-materials_index.js
 
 
 # testing
@@ -24,3 +22,5 @@ materials_index.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/src/guide/materials.json
+/src/materials_index.js
