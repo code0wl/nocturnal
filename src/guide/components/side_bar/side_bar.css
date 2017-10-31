@@ -22,6 +22,7 @@
 
 .fullscreen .library-side-nav {
     animation: slide-out .6s forwards;
+    width: 0;
 }
 
 .toggle-screen-stand-alone {
@@ -69,11 +70,8 @@
     0% {
         transform: translateX(0);
     }
-    50% {
-        transform: translateX(-150%);
-    }
     100% {
-        width: 0;
+        transform: translateX(-150%);
     }
 }
 
