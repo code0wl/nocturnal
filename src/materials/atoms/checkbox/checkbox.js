@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 
 export class Checkbox extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.handleChange = this.handleChange.bind(this);
         this.state = {
             isChecked: false
@@ -13,6 +13,10 @@ export class Checkbox extends Component {
         this.setState({
             isChecked: !this.state.isChecked
         });
+
+        if (this.props.handleToggle) {
+            this.props.handleToggle();
+        }
     }
 
     render() {
