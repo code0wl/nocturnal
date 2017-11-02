@@ -7,6 +7,7 @@ export default () => {
     return components.materials.map((component) => {
         return Object.keys(component).map(item => {
             return component[item].map((material, index) => {
+                console.log(material)
                 return (
                     <Route key={index} path={material.path} component={Components[material.exportedComponent]}/>
                 );

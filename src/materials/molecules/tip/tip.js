@@ -15,8 +15,6 @@ export class Tip extends React.Component {
         this.setState({
             display: !this.state.display
         });
-
-        console.log('clicked')
     }
 
     render() {

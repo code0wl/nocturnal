@@ -15,7 +15,6 @@ function createMaterials() {
                 material: mat[2],
                 path: `/${mat[3]}`,
                 type: mat[3],
-                component: mat[3].charAt(0).toUpperCase() + mat[3].slice(1).toLowerCase(),
                 exportedComponent: mat[4].charAt(0).toUpperCase() + mat[4].slice(1).toLowerCase().split(".")[0]
             };
             mapper.push(map);

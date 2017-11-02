@@ -38,7 +38,8 @@ export default class App extends Component {
         const filteredComponents = components.materials.map((component) => {
             return Object.keys(component).map(c => {
                 return component[c].filter(comp => {
-                    return comp.type.includes(e.currentTarget.value.toLowerCase());
+                    const search = e.currentTarget.value.toLowerCase();
+                    return comp.exportedComponent.toLowerCase().includes(search) || comp.type.includes(search);
                 });
             });
         });
