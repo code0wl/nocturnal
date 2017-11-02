@@ -4,8 +4,8 @@ import Input from "muicss/lib/react/input";
 
 export default ({change}) => {
     return (
-        <div className="filter">
-            <Input hint="Filter" onChange={change}/>
+        <div className="input-field col s6 filter">
+            <Input hint="Filter" onChange={change} className="validate"/>
             <i className="mi mi-filter-list"></i>
         </div>
     );
