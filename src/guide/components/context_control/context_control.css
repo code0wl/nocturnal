@@ -1,3 +1,12 @@
+.light-contrast .guide-controls a {
+    color: #4a525e;
+}
+
+.guide-controls a {
+    display: inline;
+    padding: 0;
+}
+
 .guide-controls a {
     display: inline;
     padding: 0;
