@@ -8,7 +8,7 @@ export default () => {
         return Object.keys(component).map(item => {
             return component[item].map((material, index) => {
                 return (
-                    <Route key={index} path={material.path} component={Components[material.component]}/>
+                    <Route key={index} path={material.path} component={Components[material.exportedComponent]}/>
                 );
             });
         });
