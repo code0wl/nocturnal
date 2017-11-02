@@ -13,7 +13,7 @@ function createMaterials() {
             const mat = materials.split("/");
             const map = {
                 material: mat[2],
-                path: `/${mat[3]}`,
+                path: `/${mat[4].split(".")[0]}`,
                 type: mat[3],
                 exportedComponent: mat[4].charAt(0).toUpperCase() + mat[4].slice(1).toLowerCase().split(".")[0]
             };

@@ -6,7 +6,7 @@ export class Circle extends React.Component {
     }
     render() {
         return (
-            <button className="waves-effect waves-light btn" onClick={this.props.handleClick}> {this.props.label || "I am a Button "} </button>
+            <button className="btn-floating btn-large waves-effect waves-light btn" onClick={this.props.handleClick}> <i className="mi mi-edit"></i> </button>
         );
     }
 }
