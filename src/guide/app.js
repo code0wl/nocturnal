@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "material-icons/css/material-icons.css";
+import "materialize-css/dist/js/materialize.min";
 import "materialize-css/dist/css/materialize.min.css";
 import "./app.css";
 import * as logo from "./assets/logo.png";
