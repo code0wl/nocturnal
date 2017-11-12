@@ -2,16 +2,6 @@
     transform: translateX(0);
 }
 
-.canvas {
-    order: 3;
-    transition: transform .4s;
-    padding: 2rem;
-    flex-grow: 1;
-    height: 100vh;
-    overflow: auto;
-    transform: translateX(10px);
-}
-
 .toggle-screen-stand-alone {
     padding: 2.5rem 0 0 1rem;
 }
