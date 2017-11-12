@@ -1,32 +1,33 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "material-icons": "^0.1.0",
-    "materialize-css": "^0.100.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-scripts": "1.0.14",
-    "redux": "^3.7.2",
-    "redux-immutable-state-invariant": "^2.1.0",
-    "redux-thunk": "^2.2.0"
-  },
-  "scripts": {
-    "component": "node tasks/materials.js",
-    "start": "concurrently \"react-scripts start\" \"node ./src/guide/tasks/materials.js\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "fs-extra": "^4.0.2",
-    "node-dir": "^0.1.17",
-    "node-watch": "^0.5.5",
-    "react-router-dom": "^4.2.2",
-    "webpack": "^3.8.1"
-  }
+    "name": "app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "material-icons": "^0.1.0",
+        "materialize-css": "^0.100.2",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-redux": "^5.0.6",
+        "react-router": "^4.2.0",
+        "react-scripts": "1.0.14",
+        "redux": "^3.7.2",
+        "redux-immutable-state-invariant": "^2.1.0",
+        "redux-thunk": "^2.2.0"
+    },
+    "scripts": {
+        "component": "node tasks/materials.js",
+        "prestart": "npm i",
+        "start": "concurrently \"react-scripts start\" \"node ./src/guide/tasks/materials.js\"",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.0",
+        "fs-extra": "^4.0.2",
+        "node-dir": "^0.1.17",
+        "node-watch": "^0.5.5",
+        "react-router-dom": "^4.2.2",
+        "webpack": "^3.8.1"
+    }
 }
