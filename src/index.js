@@ -1,6 +1,5 @@
 import React from "react";
 import {render} from "react-dom";
-import "./guide/index.css";
 import App from "./guide/app";
 import config from "./guide/store/config";
 import {Provider} from "react-redux";
