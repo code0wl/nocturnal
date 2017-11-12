@@ -34,13 +34,6 @@
     display: block;
 }
 
-.material-header-group {
-    padding: 3rem 1rem 1rem 1rem;
-    border-bottom: 1px solid;
-    text-transform: capitalize;
-    color: #4a525e;
-}
-
 .light-contrast .material-header-group {
     border-bottom: 1px solid #eee;
 }
