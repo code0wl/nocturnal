@@ -7,7 +7,7 @@ export default ({materials, select}) => {
             <li key={index}>
                 <Link className={window.location.pathname === "/" + material.exportedComponent ? "is-selected" : ""} onClick={select} to={material.exportedComponent}>
                     {material.exportedComponent}
-                    <span data-badge-caption="" className="new badge blue"> {material.type} </span>
+                    <span style={{float: "right", fontSize: ".8rem", padding: "4px", background: "red", borderRadius: "5px", margin: "-2px"}}> {material.type} </span>
                 </Link>
             </li>
         );
