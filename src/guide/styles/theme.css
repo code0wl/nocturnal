@@ -30,14 +30,6 @@ a:hover {
     border-bottom: 1px solid #e0e0e0;
 }
 
-
-.component-title {
-    color: #606e7f;
-    text-transform: capitalize;
-    margin: 0;
-    padding-bottom: 5rem;
-}
-
 .library-side-nav {
     background: #373e48;
     overflow: auto;

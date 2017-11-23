@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import "./context_control.css";
 
 export class ContextControl extends Component {
     constructor(props) {
