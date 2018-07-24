@@ -75,7 +75,7 @@ export default class App extends Component {
               className="toggle-screen-stand-alone"
               onClick={this.toggleFullScreen}
             >
-              &#62;
+              &#8853;
             </a>
             <aside className="library-side-nav">
               <ContextControl
