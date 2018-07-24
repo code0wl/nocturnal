@@ -1,15 +1,35 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default ({materials, select}) => {
-    return materials.map((material, index) => {
-        return (
-            <li key={index}>
-                <Link className={window.location.pathname === "/" + material.exportedComponent ? "is-selected" : ""} onClick={select} to={material.exportedComponent}>
-                    {material.exportedComponent}
-                    <span style={{float: "right", fontSize: ".8rem", padding: "4px", background: "red", borderRadius: "5px", margin: "-2px"}}> {material.type} </span>
-                </Link>
-            </li>
-        );
-    });
-}
+export default ({ materials, select }) => {
+  return materials.map((material, index) => {
+    return (
+      <li key={index}>
+        <Link
+          className={
+            window.location.pathname === "/" + material.exportedComponent
+              ? "is-selected"
+              : ""
+          }
+          onClick={select}
+          to={material.exportedComponent}
+        >
+          {material.exportedComponent}
+          <span
+            style={{
+              float: "right",
+              fontSize: ".8rem",
+              padding: "4px",
+              background: "red",
+              borderRadius: "5px",
+              margin: "-2px"
+            }}
+          >
+            {" "}
+            {material.type}{" "}
+          </span>
+        </Link>
+      </li>
+    );
+  });
+};
