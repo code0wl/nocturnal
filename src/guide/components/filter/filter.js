@@ -1,5 +1,4 @@
 import React from "react";
-import "./filter.css";
 
 export default ({change}) => {
     return (
