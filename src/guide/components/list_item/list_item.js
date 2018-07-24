@@ -20,7 +20,7 @@ export default ({ materials, select }) => {
               float: "right",
               fontSize: ".8rem",
               padding: "4px",
-              background: "red",
+              background: "rebeccapurple",
               borderRadius: "5px",
               margin: "-2px"
             }}

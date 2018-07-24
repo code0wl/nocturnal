@@ -22,4 +22,5 @@
 
 .app-canvas {
     display: flex;
+    overflow: hidden;
 }
