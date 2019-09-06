@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "nocturnalOptions": {
-    "mode": "atomic",
-    "path": "./src/guide/tasks/materials.ts"
+    "mode": "atomic"
   },
   "dependencies": {
     "material-icons": "^0.1.0",
@@ -19,7 +18,8 @@
   },
   "scripts": {
     "prestart": "npm i",
-    "start": "concurrently \"react-scripts start\" \"ts-node $npm_nocturnalOptions_path\"",
+    "gen:imports": "node ./src/guide/tasks/imports-generator.js",
+    "start": "concurrently \"react-scripts start\" \"npm run gen:imports\"",
     "build": "react-scripts build",
     "test": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -29,16 +29,34 @@
     "@types/node": "^12.7.4",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
     "concurrently": "^3.6.1",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
     "fs-extra": "^4.0.3",
     "json-loader": "^0.5.7",
     "node-dir": "^0.1.17",
     "node-watch": "^0.5.9",
+    "prettier": "^1.18.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.1.1",
     "ts-node": "^8.3.0",
     "tslint": "^5.19.0",
     "typescript": "^3.6.2",
-    "webpack": "^3.12.0"
+    "webpack": "4.39.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

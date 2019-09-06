@@ -1,9 +1,10 @@
 const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
+const path = require("path");
 
 function createMaterials() {
-  dir.files(`./src/materials`, (err, file) => {
+  dir.files(`./example_project/materials`, (err, file) => {
     if (err) {
       throw err;
     }
@@ -28,7 +29,7 @@ function createMaterials() {
     const tree = {};
 
     for (let i = 0; i < mapper.length; i++) {
-      if (file[i].includes(`.js`)) {
+      if (file[i].includes(".js", ".ts")) {
         if (!tree[mapper[i].material]) {
           tree[mapper[i].material] = [mapper[i]];
         } else {
@@ -57,15 +58,19 @@ function createMaterials() {
 function registerRoutes(file, locations) {
   let locationFragment = ``;
   locations.map((location, index) => {
-    if (file[index].includes(".js", ".tsx", ".jsx")) {
-      locationFragment += `export {${location.exportedComponent}} from "${file[
+    if (file[index].includes(".js", ".ts", ".js")) {
+      locationFragment += `export {${location.exportedComponent}} from "../../../${file[
         index
-      ].replace("src", ".")}";`;
+      ]
+        .replace(".js", "")
+        .replace(".jsx", "")
+        .replace(".tsx", "")
+        .replace(".ts", "")}";`;
     }
   });
 
   fse
-    .outputFile("src/materials_index.js", locationFragment)
+    .outputFile("./src/materials_index.ts", locationFragment)
     .then(() => {
       console.log("Routes initialised!");
     })
@@ -74,7 +79,7 @@ function registerRoutes(file, locations) {
     });
 }
 
-watch("src/materials/", { recursive: true }, () => {
+watch("./example_project/materials", { recursive: true }, () => {
   createMaterials();
 });
 

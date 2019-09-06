@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./app.scss";
 import * as logo from "./assets/logo.png";
-import "./styles/theme.css";
+import "./styles/theme.scss";
 import SideBarMenu from "./components/side_bar/side_bar_menu";
 import { Canvas } from "./components/canvas/canvas";
 import { BrowserRouter as Router } from "react-router-dom";

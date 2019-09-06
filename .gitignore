@@ -23,4 +23,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /src/guide/materials.json
-/src/materials_index.js
+/src/materials_index.ts
