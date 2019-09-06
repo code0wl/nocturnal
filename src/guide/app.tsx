@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./app.css";
+import "./app.scss";
 import * as logo from "./assets/logo.png";
 import "./styles/theme.css";
 import SideBarMenu from "./components/side_bar/side_bar_menu";
-import Canvas from "./components/canvas/canvas";
+import { Canvas } from "./components/canvas/canvas";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextControl } from "./components/context_control/context_control";
 import Filter from "./components/filter/filter";

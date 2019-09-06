@@ -5,7 +5,7 @@ import config from "./guide/store/config";
 import { Provider } from "react-redux";
 import registerServiceWorker from "./guide/registerServiceWorker";
 
-const store = config();
+const store = config({});
 const target = document.getElementById("root");
 
 render(

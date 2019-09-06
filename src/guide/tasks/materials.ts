@@ -57,7 +57,7 @@ function createMaterials() {
 function registerRoutes(file, locations) {
   let locationFragment = ``;
   locations.map((location, index) => {
-    if (file[index].includes(`.js`)) {
+    if (file[index].includes(".js", ".tsx", ".jsx")) {
       locationFragment += `export {${location.exportedComponent}} from "${file[
         index
       ].replace("src", ".")}";`;
