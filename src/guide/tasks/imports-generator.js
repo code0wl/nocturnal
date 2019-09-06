@@ -4,7 +4,7 @@ const dir = require("node-dir");
 const path = require("path");
 
 function createMaterials() {
-  dir.files(`./example_project/materials`, (err, file) => {
+  dir.files(`./src/example_project/materials`, (err, file) => {
     if (err) {
       throw err;
     }
@@ -29,7 +29,7 @@ function createMaterials() {
     const tree = {};
 
     for (let i = 0; i < mapper.length; i++) {
-      if (file[i].includes(".js", ".ts")) {
+      if (file[i].includes(".tsx")) {
         if (!tree[mapper[i].material]) {
           tree[mapper[i].material] = [mapper[i]];
         } else {
@@ -58,14 +58,10 @@ function createMaterials() {
 function registerRoutes(file, locations) {
   let locationFragment = ``;
   locations.map((location, index) => {
-    if (file[index].includes(".js", ".ts", ".js")) {
-      locationFragment += `export {${location.exportedComponent}} from "../../../${file[
-        index
-      ]
-        .replace(".js", "")
-        .replace(".jsx", "")
-        .replace(".tsx", "")
-        .replace(".ts", "")}";`;
+    if (file[index].includes(".tsx")) {
+      locationFragment += `export {${
+        location.exportedComponent
+      }} from "./${file[index].replace(".tsx", "")}";`;
     }
   });
 
@@ -79,7 +75,7 @@ function registerRoutes(file, locations) {
     });
 }
 
-watch("./example_project/materials", { recursive: true }, () => {
+watch("./src/example_project/materials", { recursive: true }, () => {
   createMaterials();
 });
 

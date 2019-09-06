@@ -8,9 +8,9 @@ interface Props {
 export const Button: React.FC<Props> = ({ handleClick, label }) => (
   <button
     className="waves-effect waves-light btn"
-    onClick={this.props.handleClick}
+    onClick={handleClick}
   >
     {" "}
-    {this.props.label || "I am a Button "}{" "}
+    {label || "I am a Button "}{" "}
   </button>
 );

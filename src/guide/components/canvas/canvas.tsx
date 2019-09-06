@@ -24,7 +24,7 @@ export const Canvas = () => (
         {" "}
         {window.location.pathname.replace("/", "")}{" "}
       </h3>
-      <Route component={SiteRoutes} />
+      <Route component={SiteRoutes as any} />
     </article>
   </main>
 );

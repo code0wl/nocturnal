@@ -9,7 +9,7 @@ const store = config({});
 const target = document.getElementById("root");
 
 render(
-  <Provider store={store}>
+  <Provider store={store as any}>
     <App />
   </Provider>,
   target

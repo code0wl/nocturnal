@@ -6,11 +6,12 @@ import SideBarMenu from "./components/side_bar/side_bar_menu";
 import { Canvas } from "./components/canvas/canvas";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextControl } from "./components/context_control/context_control";
-import Filter from "./components/filter/filter";
+import { Filter } from "./components/filter/filter";
 import * as components from "./materials.json";
 
 export default class App extends Component {
-  constructor(props, store) {
+  state: any;
+  constructor(props: any, store: any) {
     super(props, store);
     this.state = {
       isAlternative: window.localStorage.getItem("theme") === "true",
@@ -24,18 +25,16 @@ export default class App extends Component {
     this.setState({
       isAlternative: !this.state.isAlternative
     });
-    window.localStorage.setItem("theme", !this.state.isAlternative);
+    window.localStorage.setItem("theme", !this.state.isAlternative + "");
   };
 
-  handleFilter = e => {
-    const filteredComponents = components.materials.map(component => {
-      return Object.keys(component).map(c => {
-        return component[c].filter(comp => {
+  handleFilter = (e: any) => {
+    const filteredComponents = components.materials.map((component: any) => {
+      return Object.keys(component).map((c: any) => {
+        return component[c].filter((comp: any) => {
           const search = e.currentTarget.value.toLowerCase();
-          return (
-            comp.exportedComponent.toLowerCase().includes(search) ||
-            comp.type.includes(search)
-          );
+          return (comp.exportedComponent.toLowerCase().includes(search) ||
+            comp.type.includes(search)) as any;
         });
       });
     });
@@ -51,7 +50,7 @@ export default class App extends Component {
     this.setState({
       fullScreen: !this.state.fullScreen
     });
-    window.localStorage.setItem("fullScreen", !this.state.fullScreen);
+    window.localStorage.setItem("fullScreen", !this.state.fullScreen as any);
   };
 
   render() {
