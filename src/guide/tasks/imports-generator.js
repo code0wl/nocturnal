@@ -1,7 +1,6 @@
 const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
-const path = require("path");
 
 function createMaterials() {
   dir.files(`./src/example_project/materials`, (err, file) => {
@@ -17,8 +16,8 @@ function createMaterials() {
         path: `/${mat[4].split(".")[0]}`,
         type: mat[3],
         exportedComponent:
-          mat[4].charAt(0).toUpperCase() +
-          mat[4]
+          mat[mat.length - 1].charAt(0).toUpperCase() +
+          mat[mat.length - 1]
             .slice(1)
             .toLowerCase()
             .split(".")[0]
@@ -28,12 +27,12 @@ function createMaterials() {
 
     const tree = {};
 
-    for (let i = 0; i < mapper.length; i++) {
-      if (file[i].includes(".tsx")) {
-        if (!tree[mapper[i].material]) {
-          tree[mapper[i].material] = [mapper[i]];
+    for (let item in mapper) {
+      if (file[item].includes(".ts", ".js")) {
+        if (!tree[mapper[item].material]) {
+          tree[mapper[item].material] = [mapper[item]];
         } else {
-          tree[mapper[i].material].push(mapper[i]);
+          tree[mapper[item].material].push(mapper[item]);
         }
       }
     }
@@ -45,7 +44,7 @@ function createMaterials() {
     };
 
     fse
-      .outputJson("src/guide/materials.json", materialsJSON)
+      .outputJson("./src/guide/materials.json", materialsJSON)
       .then(() => {
         console.log("JSON material tree created successfully!");
       })
@@ -58,10 +57,10 @@ function createMaterials() {
 function registerRoutes(file, locations) {
   let locationFragment = ``;
   locations.map((location, index) => {
-    if (file[index].includes(".tsx")) {
+    if (file[index].includes(".ts", ".js")) {
       locationFragment += `export {${
         location.exportedComponent
-      }} from "./${file[index].replace(".tsx", "")}";`;
+      }} from "./${file[index].replace("src/", "").replace(".tsx", "")}";`;
     }
   });
 
