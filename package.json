@@ -5,9 +5,9 @@
     "dependencies": {
         "material-icons": "^0.1.0",
         "materialize-css": "^0.100.2",
-        "react": "^16.4.1",
-        "react-dom": "^16.4.1",
-        "react-redux": "^5.0.7",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-redux": "^5.1.1",
         "react-router": "^4.3.1",
         "react-scripts": "1.0.14",
         "redux": "^3.7.2",
@@ -23,11 +23,13 @@
         "eject": "react-scripts eject"
     },
     "devDependencies": {
-        "concurrently": "^3.6.0",
+        "concurrently": "^3.6.1",
         "fs-extra": "^4.0.3",
         "node-dir": "^0.1.17",
-        "node-watch": "^0.5.8",
+        "node-watch": "^0.5.9",
         "react-router-dom": "^4.3.1",
+        "tslint": "^5.19.0",
+        "typescript": "^3.6.2",
         "webpack": "^3.12.0"
     }
 }

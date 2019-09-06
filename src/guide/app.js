@@ -13,12 +13,10 @@ export default class App extends Component {
   constructor(props, store) {
     super(props, store);
     this.state = {
-      isAlternative:
-        window.localStorage.getItem("theme") === "true" ? true : false,
+      isAlternative: window.localStorage.getItem("theme") === "true",
       filterValue: "",
       components: components.materials,
-      fullScreen:
-        window.localStorage.getItem("fullScreen") === "true" ? true : false
+      fullScreen: window.localStorage.getItem("fullScreen") === "true"
     };
   }
 

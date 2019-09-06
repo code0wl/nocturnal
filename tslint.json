@@ -1,0 +1,15 @@
+{
+  "defaultSeverity": "error",
+  "rules": {
+    "max-line-length": {
+      "options": [180]
+    },
+    "no-bitwise": true,
+    "no-empty-interface": true,
+    "unified-signatures": false,
+    "no-consecutive-blank-lines": false,
+    "no-console": {
+      "options": ["debug", "log", "time", "timeEnd", "trace"]
+    }
+  }
+}

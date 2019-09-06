@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["dom", "esnext"],
+    "module": "commonjs",
+    "noEmitOnError": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "typeRoots": ["./node_modules/@types"],
+  "files": [
+    "src/server/server.ts",
+    "src/shared/events.model.ts",
+    "src/shared/models.ts",
+    "main.ts",
+    "./node_modules/phaser-ce/typescript/phaser.comments.d.ts"
+  ],
+  "exclude": ["node_modules", "*.spec.ts"],
+  "awesomeTypescriptLoaderOptions": {
+    "transpileOnly": true
+  }
+}
