@@ -63,28 +63,22 @@ export default class App extends Component {
               : ""
           }`}
         >
-          <div
-            className={`app-canvas ${
-              this.state.fullScreen ? "fullscreen" : ""
-            }`}
+          <a
+            className="toggle-screen-stand-alone"
+            onClick={this.toggleFullScreen}
           >
-            <a
-              className="toggle-screen-stand-alone"
-              onClick={this.toggleFullScreen}
-            >
-              &#8853;
-            </a>
-            <aside className="library-side-nav">
-              <ContextControl
-                toggleFullScreen={this.toggleFullScreen}
-                logo={logo}
-                toggleContrast={this.toggleContrast}
-              />
-              <Filter change={this.handleFilter} />
-              <SideBarMenu components={this.state.components} />
-            </aside>
-            <Canvas />
-          </div>
+            &#8853;
+          </a>
+          <aside className="library-side-nav guide-aside">
+            <ContextControl
+              toggleFullScreen={this.toggleFullScreen}
+              logo={logo}
+              toggleContrast={this.toggleContrast}
+            />
+            <Filter change={this.handleFilter} />
+            <SideBarMenu components={this.state.components} />
+          </aside>
+          <Canvas />
         </div>
       </Router>
     );

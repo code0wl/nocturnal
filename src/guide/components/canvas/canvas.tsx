@@ -3,15 +3,7 @@ import { Route } from "react-router-dom";
 import SiteRoutes from "../routes/routes";
 
 export const Canvas = () => (
-  <main
-    style={{
-      transition: "transform .4s",
-      padding: "2rem",
-      height: "100vh",
-      overflow: "auto",
-      transform: "translateX(10px)"
-    }}
-  >
+  <main className="guide-main">
     <article>
       <h3
         style={{

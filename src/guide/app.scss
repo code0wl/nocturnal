@@ -1,26 +1,33 @@
 .app {
-    color: white;
-    background: #2a2e37;
+  display: grid;
+  grid-template-columns: 300px auto;
+  color: white;
+  background: #2a2e37;
+}
+
+body {
+  transition: all 0.4s;
+}
+
+.guide-aside {
+}
+
+.guide-main {
 }
 
 .guide-logo {
-    width: 4.5rem;
-    padding: 1rem;
-    background: rebeccapurple;
+  width: 4.5rem;
+  padding: 1rem;
+  background: rebeccapurple;
 }
 
 .guide nav {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    height: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: auto;
 }
 
 .app.light-contrast {
-    background: #f0f0f0;
-}
-
-.app-canvas {
-    display: grid;
-    overflow: hidden;
+  background: #f0f0f0;
 }
