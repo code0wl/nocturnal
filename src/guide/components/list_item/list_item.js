@@ -25,8 +25,7 @@ export default ({ materials, select }) => {
               margin: "-2px"
             }}
           >
-            {" "}
-            {material.type}{" "}
+            {material.type}
           </span>
         </Link>
       </li>

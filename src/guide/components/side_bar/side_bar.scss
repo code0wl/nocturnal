@@ -1,7 +1,5 @@
 .library-side-nav {
     transition: all .4s;
-    height: 100vh;
-    width: 300px;
     overflow-y: auto;
     overflow-x: hidden;
     transform: translateX(0);
@@ -11,7 +9,6 @@
     list-style-position: inside;
     padding: 0;
     margin: 0;
-    width: 300px;
 }
 
 .library-side-nav li {

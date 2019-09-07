@@ -5,17 +5,20 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 
 // Get document, or throw exception on error
-try {
-  const doc = yaml.safeLoad(fs.readFileSync("/home/ixti/example.yml", "utf8"));
-  console.log(doc);
-} catch (e) {
-  console.log(e);
-}
+const settings = new Promise(resolve => {
+  resolve(yaml.safeLoad(fs.readFileSync("src/.nocturnal.yml", "utf8")));
+});
 
-console.log(settings);
+settings.then(body => {
+  const componentsDirectory = body.settings.componentDirectory;
+  watch(componentsDirectory, { recursive: true }, () => {
+    createMaterials(componentsDirectory);
+  });
+  createMaterials(componentsDirectory);
+});
 
-function createMaterials() {
-  dir.files("./src/examples/atomic_example_project/materials", (err, file) => {
+function createMaterials(directory) {
+  dir.files(directory, (err, file) => {
     if (err) {
       throw err;
     }
@@ -23,10 +26,11 @@ function createMaterials() {
     const mapper = [];
     file.map(materials => {
       const mat = materials.split("/");
+      console.log(mat)
       const map = {
         material: mat[2],
         path: `/${mat[4].split(".")[0]}`,
-        type: mat[3],
+        type: mat[4],
         exportedComponent:
           mat[mat.length - 1].charAt(0).toUpperCase() +
           mat[mat.length - 1]
@@ -85,13 +89,3 @@ function registerRoutes(file, locations) {
       console.error(err);
     });
 }
-
-watch(
-  "src/examples/atomic_example_project/materials",
-  { recursive: true },
-  () => {
-    createMaterials();
-  }
-);
-
-createMaterials();

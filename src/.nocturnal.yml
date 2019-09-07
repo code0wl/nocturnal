@@ -3,7 +3,7 @@
 settings:
   # Project directory
   # Where your components are located
-  componentDirectories: "examples/atomic_example_project/materials"
+  componentDirectory: "src/examples/atomic_example_project/materials"
 
   # Theme will let you specify a style url for your nocturnal instance
   # default | yourCSSFile.(css | scss)
