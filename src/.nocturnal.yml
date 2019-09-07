@@ -1,0 +1,14 @@
+# Nocturnal settings
+# Change values to fit in your project
+settings:
+  # Project directory
+  # Where your components are located
+  componentDirectories: "examples/atomic_example_project/materials"
+
+  # Theme will let you specify a style url for your nocturnal instance
+  # default | yourCSSFile.(css | scss)
+  themeUrl: "default"
+
+  # Paradigm allows you to define your style
+  # "components" | "atomic"
+  paradigm: "atomic"

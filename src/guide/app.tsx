@@ -29,15 +29,15 @@ export default class App extends Component {
   };
 
   handleFilter = (e: any) => {
-    const filteredComponents = components.materials.map((component: any) => {
-      return Object.keys(component).map((c: any) => {
+    const filteredComponents = components.materials.map((component: any) =>
+      Object.keys(component).map((c: any) => {
         return component[c].filter((comp: any) => {
           const search = e.currentTarget.value.toLowerCase();
           return (comp.exportedComponent.toLowerCase().includes(search) ||
             comp.type.includes(search)) as any;
         });
-      });
-    });
+      })
+    );
 
     this.setState({
       filterValue: e.currentTarget.value.toLowerCase(),

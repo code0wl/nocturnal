@@ -1,9 +1,21 @@
 const fse = require("fs-extra");
 const watch = require("node-watch");
 const dir = require("node-dir");
+const yaml = require("js-yaml");
+const fs = require("fs");
+
+// Get document, or throw exception on error
+try {
+  const doc = yaml.safeLoad(fs.readFileSync("/home/ixti/example.yml", "utf8"));
+  console.log(doc);
+} catch (e) {
+  console.log(e);
+}
+
+console.log(settings);
 
 function createMaterials() {
-  dir.files(`./src/example_project/materials`, (err, file) => {
+  dir.files("./src/examples/atomic_example_project/materials", (err, file) => {
     if (err) {
       throw err;
     }
@@ -44,7 +56,7 @@ function createMaterials() {
     };
 
     fse
-      .outputJson("./src/guide/materials.json", materialsJSON)
+      .outputJson("src/guide/materials.json", materialsJSON)
       .then(() => {
         console.log("JSON material tree created successfully!");
       })
@@ -65,7 +77,7 @@ function registerRoutes(file, locations) {
   });
 
   fse
-    .outputFile("./src/materials_index.ts", locationFragment)
+    .outputFile("src/materials_index.ts", locationFragment)
     .then(() => {
       console.log("Routes initialised!");
     })
@@ -74,8 +86,12 @@ function registerRoutes(file, locations) {
     });
 }
 
-watch("./src/example_project/materials", { recursive: true }, () => {
-  createMaterials();
-});
+watch(
+  "src/examples/atomic_example_project/materials",
+  { recursive: true },
+  () => {
+    createMaterials();
+  }
+);
 
 createMaterials();
