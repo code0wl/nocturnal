@@ -14,6 +14,7 @@ export default class App extends Component {
   constructor(props: any, store: any) {
     super(props, store);
     this.state = {
+      selected: window.location.pathname.replace("/", ""),
       isAlternative: window.localStorage.getItem("theme") === "true",
       filterValue: "",
       components: components.materials,
@@ -80,7 +81,7 @@ export default class App extends Component {
             <Filter change={this.handleFilter} />
             <SideBarMenu components={this.state.components} />
           </aside>
-          <Canvas />
+          <Canvas selected={this.state.selected} />
         </div>
       </Router>
     );

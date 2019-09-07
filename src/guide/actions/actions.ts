@@ -1,4 +1,0 @@
-export const FILTER_SEARCH = "FILTER_SEARCH";
-export const RUN_UNIT_TEST = "RUN_UNIT_TEST";
-export const RUN_E2E_TEST = "RUN_E2E_TEST";
-export const SELECTED_COMPONENT = "SELECTED_COMPONENT";
