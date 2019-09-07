@@ -7,12 +7,13 @@ export default ({ materials, select }) => {
       <li key={index}>
         <Link
           className={
-            window.location.pathname === "/" + material.exportedComponent
+            window.location.pathname ===
+            "/" + material.exportedComponent.toLowerCase()
               ? "is-selected"
               : ""
           }
           onClick={select}
-          to={material.exportedComponent}
+          to={"/" + material.exportedComponent.toLowerCase()}
         >
           {material.exportedComponent}
           <span
