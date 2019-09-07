@@ -81,8 +81,10 @@ function registerRoutes(file, locations) {
     }
   });
 
+  console.log()
+
   fse
-    .outputFile("src/materials_index.ts", locationFragment)
+    .outputFile("src/materials_index.tsx", locationFragment)
     .then(() => {
       console.log("Routes initialised!");
     })
