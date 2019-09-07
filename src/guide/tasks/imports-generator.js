@@ -5,17 +5,19 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 
 // Get document, or throw exception on error
-const settings = new Promise(resolve => {
-  resolve(yaml.safeLoad(fs.readFileSync("src/.nocturnal.yml", "utf8")));
-});
+const settings = async () => {
+  const files = await yaml.safeLoad(
+    fs.readFileSync("src/.nocturnal.yml", "utf8")
+  );
 
-settings.then(body => {
-  const componentsDirectory = body.settings.componentDirectory;
+  const componentsDirectory = files.settings.componentDirectory;
   watch(componentsDirectory, { recursive: true }, () => {
     createMaterials(componentsDirectory);
   });
   createMaterials(componentsDirectory);
-});
+};
+
+settings();
 
 function createMaterials(directory) {
   dir.files(directory, (err, file) => {
@@ -26,7 +28,6 @@ function createMaterials(directory) {
     const mapper = [];
     file.map(materials => {
       const mat = materials.split("/");
-      console.log(mat)
       const map = {
         material: mat[2],
         path: `/${mat[4].split(".")[0]}`,
