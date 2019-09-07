@@ -28,7 +28,7 @@ function createMaterials() {
     const tree = {};
 
     for (let item in mapper) {
-      if (file[item].includes(".ts", ".js")) {
+      if (file[item].includes(".tsx", ".jsx")) {
         if (!tree[mapper[item].material]) {
           tree[mapper[item].material] = [mapper[item]];
         } else {
@@ -57,7 +57,7 @@ function createMaterials() {
 function registerRoutes(file, locations) {
   let locationFragment = ``;
   locations.map((location, index) => {
-    if (file[index].includes(".ts", ".js")) {
+    if (file[index].includes(".tsx", ".jsx")) {
       locationFragment += `export {${
         location.exportedComponent
       }} from "./${file[index].replace("src/", "").replace(".tsx", "")}";`;
