@@ -60,7 +60,7 @@ export default class App extends Component {
     return (
       <Router>
         <div
-          className={`app ${
+          className={`nocturnal-app ${
             window.localStorage.getItem("theme") === "true"
               ? "light-contrast"
               : ""
