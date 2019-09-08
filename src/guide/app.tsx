@@ -1,35 +1,33 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import * as logo from "./assets/logo.png";
 import "./styles/theme.scss";
-import SideBarMenu from "./components/side_bar/SideBarMenu";
+import { SideBarMenu } from "./components/side_bar/SideBarMenu";
 import { Canvas } from "./components/canvas/canvas";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextControl } from "./components/context_control/context_control";
 import { Filter } from "./components/filter/filter";
 import * as components from "./materials.json";
 
-export default class App extends Component {
-  state: any;
-  constructor(props: any, store: any) {
-    super(props, store);
-    this.state = {
-      selected: window.location.pathname.replace("/", ""),
-      isAlternative: window.localStorage.getItem("theme") === "true",
-      filterValue: "",
-      components: components.materials,
-      fullScreen: window.localStorage.getItem("fullScreen") === "true"
-    };
-  }
+export const App = () => {
+  const [isSelected, setSelected] = useState(
+    window.location.pathname.replace("/", "")
+  );
+  const [alternative, setAlternative] = useState(
+    window.localStorage.getItem("theme") === "true"
+  );
+  const [filterValue, setFilterValue] = useState("");
+  const [component, setComponents] = useState(components.materials);
+  const [isFullScreen, setFullScreen] = useState(
+    window.localStorage.getItem("fullScreen") === "true"
+  );
 
-  toggleContrast = () => {
-    this.setState({
-      isAlternative: !this.state.isAlternative
-    });
-    window.localStorage.setItem("theme", !this.state.isAlternative + "");
+  const toggleContrast = () => {
+    setAlternative(!alternative);
+    window.localStorage.setItem("theme", !alternative + "");
   };
 
-  handleFilter = (e: any) => {
+  const handleFilter = (e: any) => {
     const filteredComponents = components.materials.map((component: any) =>
       Object.keys(component).map((c: any) => {
         return component[c].filter((comp: any) => {
@@ -42,48 +40,43 @@ export default class App extends Component {
       })
     );
 
-    this.setState({
-      filterValue: e.currentTarget.value.toLowerCase(),
-      components:
-        e.currentTarget.value !== "" ? filteredComponents : components.materials
-    });
-  };
+    setFilterValue(e.currentTarget.value.toLowerCase());
 
-  toggleFullScreen = () => {
-    this.setState({
-      fullScreen: !this.state.fullScreen
-    });
-    window.localStorage.setItem("fullScreen", !this.state.fullScreen as any);
-  };
-
-  render() {
-    return (
-      <Router>
-        <div
-          className={`nocturnal-app ${
-            window.localStorage.getItem("theme") === "true"
-              ? "light-contrast"
-              : ""
-          }`}
-        >
-          <a
-            className="toggle-screen-stand-alone"
-            onClick={this.toggleFullScreen}
-          >
-            &#8853;
-          </a>
-          <aside className="library-side-nav guide-aside">
-            <ContextControl
-              toggleFullScreen={this.toggleFullScreen}
-              logo={logo}
-              toggleContrast={this.toggleContrast}
-            />
-            <Filter change={this.handleFilter} />
-            <SideBarMenu components={this.state.components} />
-          </aside>
-          <Canvas selected={this.state.selected} />
-        </div>
-      </Router>
+    setComponents(
+      e.currentTarget.value !== ""
+        ? filteredComponents
+        : (components.materials as any)
     );
-  }
-}
+  };
+
+  const toggleFullScreen = () => {
+    setFullScreen(!isFullScreen);
+    window.localStorage.setItem("fullScreen", !isFullScreen as any);
+  };
+
+  return (
+    <Router>
+      <div
+        className={`nocturnal-app ${
+          window.localStorage.getItem("theme") === "true"
+            ? "light-contrast"
+            : ""
+        }`}
+      >
+        <a className="toggle-screen-stand-alone" onClick={toggleFullScreen}>
+          &#8853;
+        </a>
+        <aside className="library-side-nav guide-aside">
+          <ContextControl
+            toggleFullScreen={toggleFullScreen}
+            logo={logo}
+            toggleContrast={toggleContrast}
+          />
+          <Filter change={handleFilter} />
+          <SideBarMenu components={components} />
+        </aside>
+        <Canvas selected={isSelected} />
+      </div>
+    </Router>
+  );
+};
