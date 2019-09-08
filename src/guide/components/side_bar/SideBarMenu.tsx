@@ -3,7 +3,8 @@ import ListContainer from "../list_item/list_container";
 import "./side_bar.scss";
 
 export default class SideBarMenu extends Component {
-  constructor(props) {
+  props: any;
+  constructor(props: any) {
     super(props);
     this.setSelectedItem = this.setSelectedItem.bind(this);
   }
@@ -15,7 +16,7 @@ export default class SideBarMenu extends Component {
   }
 
   render() {
-    return this.props.components.map(component => {
+    return this.props.components.map((component: any) => {
       return Object.keys(component).map((material, index) => {
         return (
           <div key={material + index}>

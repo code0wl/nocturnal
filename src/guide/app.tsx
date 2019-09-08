@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./app.scss";
 import * as logo from "./assets/logo.png";
 import "./styles/theme.scss";
-import { SideBarMenu } from "./components/side_bar/SideBarMenu";
 import { Canvas } from "./components/canvas/canvas";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextControl } from "./components/context_control/context_control";
 import { Filter } from "./components/filter/filter";
 import * as components from "./materials.json";
+import SideBarMenu from "./components/side_bar/SideBarMenu";
 
 export const App = () => {
   const [isSelected, setSelected] = useState(
