@@ -1,7 +1,3 @@
 import React from "react";
 
-export class Modal extends React.Component {
-  render() {
-    return <div>Hi there</div>;
-  }
-}
+export const Modal = () => <div>Hi there</div>;
