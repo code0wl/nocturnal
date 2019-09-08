@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./app.scss";
 import * as logo from "./assets/logo.png";
 import "./styles/theme.scss";
@@ -25,6 +25,9 @@ export const App = () => {
   const [isFullScreen, setFullScreen] = useState(
     window.localStorage.getItem("fullScreen") === "true"
   );
+
+  const handleSelect = (e: any) =>
+    setSelected(e.currentTarget.firstChild.innerText);
 
   const toggleContrast = () => {
     setAlternative(!alternative);
@@ -77,7 +80,7 @@ export const App = () => {
             toggleContrast={toggleContrast}
           />
           <Filter change={handleFilter} />
-          <SideBarMenu components={materials} />
+          <SideBarMenu select={handleSelect} components={materials} />
         </aside>
         <Canvas selected={isSelected} />
       </div>

@@ -15,7 +15,7 @@ export default ({ materials, select }) => {
           onClick={select}
           to={"/" + material.exportedComponent.toLowerCase()}
         >
-          {material.exportedComponent}
+          <span>{material.exportedComponent}</span>
           <span
             style={{
               float: "right",
