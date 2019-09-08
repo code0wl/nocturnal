@@ -1,51 +1,32 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import ListContainer from "../list_item/list_container";
 import "./side_bar.scss";
 
-export default class SideBarMenu extends Component {
-  props: any;
-  constructor(props: any) {
-    super(props);
-    this.setSelectedItem = this.setSelectedItem.bind(this);
-  }
+export const SideBarMenu = ({ components }: any) => {
+  const [selected, setSelect] = useState("");
 
-  setSelectedItem() {
-    this.setState({
-      selected: window.location.pathname
-    });
-  }
+  const setSelectedItem = () => {
+    setSelect(window.location.pathname);
+  };
 
-  render() {
-    return this.props.components.map((component: any) => {
-      return Object.keys(component).map((material, index) => {
-        return (
-          <div key={material + index}>
-            {material.length > 1 ? (
-              <h6
-                style={{
-                  fontSize: "16px",
-                  margin: "0",
-                  padding: "3rem 1rem 1rem 1rem",
-                  borderBottom: "1px solid",
-                  textTransform: "capitalize",
-                  color: "#4a525e"
-                }}
-              >
-                {material}{" "}
-                <span style={{ float: "right", color: "#999" }}>
-                  {component[material].length}
-                </span>
-              </h6>
-            ) : (
-              ""
-            )}
-            <ListContainer
-              selected={this.setSelectedItem}
-              materials={component[material]}
-            />
-          </div>
-        );
-      });
-    });
-  }
-}
+  return components.map((component: any) =>
+    Object.keys(component).map((material, index) => (
+      <div key={material + index}>
+        {material.length > 1 ? (
+          <h6>
+            {material}
+            <span style={{ float: "right", color: "#999" }}>
+              {component[material].length}
+            </span>
+          </h6>
+        ) : (
+          ""
+        )}
+        <ListContainer
+          selected={setSelectedItem}
+          materials={component[material]}
+        />
+      </div>
+    ))
+  );
+};

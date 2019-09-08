@@ -7,9 +7,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ContextControl } from "./components/context_control/context_control";
 import { Filter } from "./components/filter/filter";
 import * as components from "./materials.json";
-import SideBarMenu from "./components/side_bar/SideBarMenu";
+import { SideBarMenu } from "./components/side_bar/SideBarMenu";
 
 export const App = () => {
+  const collectedComponents = components as any;
+  const {
+    default: { materials }
+  } = collectedComponents;
   const [isSelected, setSelected] = useState(
     window.location.pathname.replace("/", "")
   );
@@ -73,7 +77,7 @@ export const App = () => {
             toggleContrast={toggleContrast}
           />
           <Filter change={handleFilter} />
-          <SideBarMenu components={components} />
+          <SideBarMenu components={materials} />
         </aside>
         <Canvas selected={isSelected} />
       </div>
